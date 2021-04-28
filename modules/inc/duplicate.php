@@ -3,8 +3,8 @@
 // $linkedID = '6db5b486ce'; // Test Link ID of mark@ohwowmarketing.com
 $linkedID = $_GET['lid'];
 
-// $api_key = 'aad7ca0a2470417df5f4bb57b71cfe83-us11';
-$api_key = '1607821d6eb072f127a1108999d0a0a1-us3';
+// $api_key = '';
+$api_key = '';
 // $list_id = '478547c406';
 $list_id = '530a1942ca';
 
