@@ -41,12 +41,12 @@
 		"oAP": "/-page.php",
 		"oF": 0
 		},
-	"/.single-landing-investment-copy.php": {
+	"/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 2,
-		"oAP": "/.single-landing-investment-copy.php",
+		"oAP": "/.gitignore",
 		"oF": 0
 		},
 	"/404.php": {
@@ -55,14 +55,6 @@
 		"hM": 0,
 		"oA": 2,
 		"oAP": "/404.php",
-		"oF": 0
-		},
-	"/_temp/index.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/_temp/index.php",
 		"oF": 0
 		},
 	"/assets/fonts/fontawesome-webfont.eot": {
@@ -456,17 +448,6 @@
 		"oT": 1,
 		"q": 100
 		},
-	"/assets/images/img-bg-webinar-cover.jpg": {
-		"ft": 16384,
-		"iS": 211499,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/assets/images/img-bg-webinar-cover.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
 	"/assets/images/img-bg-webinar.jpg": {
 		"ft": 16384,
 		"iS": 128819,
@@ -483,6 +464,28 @@
 		"iS": 121,
 		"oA": 0,
 		"oAP": "/assets/images/img-transIE.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/images/map-marker-garver-copy.png": {
+		"ft": 32768,
+		"iS": 3578,
+		"oA": 0,
+		"oAP": "/assets/images/map-marker-garver-copy.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/images/map-marker-garver.png": {
+		"ft": 32768,
+		"iS": 2643,
+		"oA": 0,
+		"oAP": "/assets/images/map-marker-garver.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -509,6 +512,17 @@
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
+		"q": 100
+		},
+	"/assets/images/nas-modal-propertyBG.jpg": {
+		"ft": 16384,
+		"iS": 375016,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/images/nas-modal-propertyBG.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"q": 100
 		},
 	"/assets/images/nasis-bg-contact-by-phone.jpg": {
@@ -607,6 +621,17 @@
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
+		"q": 100
+		},
+	"/assets/images/walgreens-burbank-illinois-marker.png": {
+		"ft": 32768,
+		"iS": 4935,
+		"oA": 0,
+		"oAP": "/assets/images/walgreens-burbank-illinois-marker.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"/assets/images/youtube-play.svg": {
@@ -875,22 +900,6 @@
 		"sI": 1,
 		"sU": 1
 		},
-	"/assets/less/page-dst-exchage-copy.less": {
-		"aP": 1,
-		"bl": 0,
-		"eJ": 0,
-		"ft": 1,
-		"iI": 0,
-		"ma": 0,
-		"mS": 0,
-		"oA": 0,
-		"oAP": "/assets/styles/page-dst-exchage-copy.css",
-		"oF": 0,
-		"oS": 1,
-		"rwU": 0,
-		"sI": 1,
-		"sU": 1
-		},
 	"/assets/less/page-dst-exchage.less": {
 		"aP": 1,
 		"bl": 0,
@@ -981,22 +990,6 @@
 		"mS": 0,
 		"oA": 0,
 		"oAP": "/assets/styles/page-home.css",
-		"oF": 0,
-		"oS": 1,
-		"rwU": 0,
-		"sI": 1,
-		"sU": 1
-		},
-	"/assets/less/page-investment-highlights-copy.less": {
-		"aP": 1,
-		"bl": 0,
-		"eJ": 0,
-		"ft": 1,
-		"iI": 0,
-		"ma": 0,
-		"mS": 0,
-		"oA": 0,
-		"oAP": "/assets/styles/page-investment-highlights-copy.css",
 		"oF": 0,
 		"oS": 1,
 		"rwU": 0,
@@ -1256,116 +1249,6 @@
 		"sI": 1,
 		"sU": 1
 		},
-	"/assets/scripts/_oldjsset/main.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/assets/scripts/_oldjsset/main.min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
-	"/assets/scripts/_oldjsset/main.min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/assets/scripts/_oldjsset/main.min.min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
-	"/assets/scripts/_oldset/-main.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/assets/scripts/_oldset/-main.min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
-	"/assets/scripts/_oldset/-main.min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/assets/scripts/_oldset/-main.min.min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
-	"/assets/scripts/_oldset/_main.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/assets/scripts/_oldset/_main.min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
-	"/assets/scripts/_oldset/_main.min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/assets/scripts/_oldset/_main.min.min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
-	"/assets/scripts/_oldset/main.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/assets/scripts/_oldset/main.min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
-	"/assets/scripts/_oldset/main.min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/assets/scripts/_oldset/main.min.min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
-	"/assets/scripts/_oldset/main.old copy.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/assets/scripts/_oldset/main.old copy.min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
-	"/assets/scripts/_oldset/main.old.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/assets/scripts/_oldset/main.old.min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
 	"/assets/scripts/inc/about.js": {
 		"bF": 0,
 		"ft": 64,
@@ -1476,17 +1359,6 @@
 		"sC": 0,
 		"tS": 0
 		},
-	"/assets/scripts/main-copy.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/assets/scripts/main-copy.min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
 	"/assets/scripts/main.js": {
 		"bF": 0,
 		"ft": 64,
@@ -1520,61 +1392,6 @@
 		"sC": 0,
 		"tS": 0
 		},
-	"/assets/scripts/plugins/acf-map.min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/assets/scripts/plugins/acf-map.min.min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
-	"/assets/scripts/plugins/analytics.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/assets/scripts/plugins/analytics.min.js",
-		"oF": 1,
-		"sC": 0,
-		"tS": 0
-		},
-	"/assets/scripts/plugins/bioep.init.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/assets/scripts/plugins/bioep.init.min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
-	"/assets/scripts/plugins/bioep.init.min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/assets/scripts/plugins/bioep.init.min.min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
-	"/assets/scripts/plugins/bioep.min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/assets/scripts/plugins/bioep.min.min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
 	"/assets/scripts/plugins/jquery-ias.min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -1585,69 +1402,6 @@
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
-		},
-	"/assets/scripts/plugins/jQuery.YouTube.HD.Thumbnail.min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/assets/scripts/plugins/jQuery.YouTube.HD.Thumbnail.min.min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
-	"/assets/scripts/plugins/notification.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/assets/scripts/plugins/notification.min.js",
-		"oF": 1,
-		"sC": 0,
-		"tS": 0
-		},
-	"/assets/scripts/plugins/vanadium.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/assets/scripts/plugins/vanadium.min.js",
-		"oF": 1,
-		"sC": 0,
-		"tS": 0
-		},
-	"/assets/styles/-page-1031-exchange.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/assets/styles/-page-1031-exchange-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/assets/styles/-page-available-investments.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/assets/styles/-page-available-investments-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/assets/styles/-page-home.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/assets/styles/-page-home-min.css",
-		"oF": 0,
-		"oS": 3
 		},
 	"/assets/styles/page-1031-exchange.css": {
 		"aP": 1,
@@ -1769,12 +1523,12 @@
 		"oF": 0,
 		"oS": 3
 		},
-	"/assets/styles/page-global.css.3-16-20": {
+	"/assets/styles/page-global.css.map": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 2,
-		"oAP": "/assets/styles/page-global.css.3-16-20",
+		"oAP": "/assets/styles/page-global.css.map",
 		"oF": 0
 		},
 	"/assets/styles/page-glossary.css": {
@@ -1797,16 +1551,6 @@
 		"oF": 0,
 		"oS": 3
 		},
-	"/assets/styles/page-investment-highlights-copy.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/assets/styles/page-investment-highlights-copy-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"/assets/styles/page-investment-highlights.css": {
 		"aP": 1,
 		"bl": 0,
@@ -1816,6 +1560,14 @@
 		"oAP": "/assets/styles/page-investment-highlights-min.css",
 		"oF": 0,
 		"oS": 3
+		},
+	"/assets/styles/page-investment-highlights.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/assets/styles/page-investment-highlights.css.map",
+		"oF": 0
 		},
 	"/assets/styles/page-investors-download.css": {
 		"aP": 1,
@@ -1927,6 +1679,24 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"/assets/styles/page-thankyou.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/styles/page-thankyou-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/styles/page-thankyou.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/assets/styles/page-thankyou.css.map",
+		"oF": 0
+		},
 	"/assets/styles/wp-acf-editor.css": {
 		"aP": 1,
 		"bl": 0,
@@ -1963,14 +1733,6 @@
 		"oAP": "/index.php",
 		"oF": 0
 		},
-	"/lib/base/.header.php.bak-1-29-20": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/lib/base/.header.php.bak-1-29-20",
-		"oF": 0
-		},
 	"/lib/base/footer.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1993,14 +1755,6 @@
 		"hM": 0,
 		"oA": 2,
 		"oAP": "/lib/base/scrap.php",
-		"oF": 0
-		},
-	"/lib/functions/.stagefile-assets.050102018": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/lib/functions/.stagefile-assets.050102018",
 		"oF": 0
 		},
 	"/lib/functions/acf.php": {
@@ -2065,14 +1819,6 @@
 		"hM": 0,
 		"oA": 2,
 		"oAP": "/lib/useragent/UserAgentParser.php",
-		"oF": 0
-		},
-	"/modules/fragments/.oldFiles/menu.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/modules/fragments/.oldFiles/menu.php",
 		"oF": 0
 		},
 	"/modules/fragments/dropdown.php": {
@@ -2267,54 +2013,6 @@
 		"oAP": "/modules/maintenance/maintenance.php",
 		"oF": 0
 		},
-	"/modules/slugs/.page-45-180-day-exchange-calculator.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/modules/slugs/.page-45-180-day-exchange-calculator.php",
-		"oF": 0
-		},
-	"/modules/slugs/.page-dst-1031-exchange-information.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/modules/slugs/.page-dst-1031-exchange-information.php",
-		"oF": 0
-		},
-	"/modules/slugs/.page-home-copy.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/modules/slugs/.page-home-copy.php",
-		"oF": 0
-		},
-	"/modules/slugs/.page-tax-rates-by-states.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/modules/slugs/.page-tax-rates-by-states.php",
-		"oF": 0
-		},
-	"/modules/slugs/.page-webinar-copy.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/modules/slugs/.page-webinar-copy.php",
-		"oF": 0
-		},
-	"/modules/slugs/.page-webinar.php-6-4-2020": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/modules/slugs/.page-webinar.php-6-4-2020",
-		"oF": 0
-		},
 	"/modules/slugs/page-1031-exchange-articles.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -2355,22 +2053,6 @@
 		"oAP": "/modules/slugs/page-acquisition-criteria.php",
 		"oF": 0
 		},
-	"/modules/slugs/page-available-investments-copy.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/modules/slugs/page-available-investments-copy.php",
-		"oF": 0
-		},
-	"/modules/slugs/page-available-investments.bak-12-21-18": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/modules/slugs/page-available-investments.bak-12-21-18",
-		"oF": 0
-		},
 	"/modules/slugs/page-available-investments.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -2393,6 +2075,22 @@
 		"hM": 0,
 		"oA": 2,
 		"oAP": "/modules/slugs/page-contact.php",
+		"oF": 0
+		},
+	"/modules/slugs/page-download-booklet.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/modules/slugs/page-download-booklet.php",
+		"oF": 0
+		},
+	"/modules/slugs/page-download-guide.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/modules/slugs/page-download-guide.php",
 		"oF": 0
 		},
 	"/modules/slugs/page-email-alert.php": {
@@ -2425,14 +2123,6 @@
 		"hM": 0,
 		"oA": 2,
 		"oAP": "/modules/slugs/page-glossary.php",
-		"oF": 0
-		},
-	"/modules/slugs/page-home-old.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/modules/slugs/page-home-old.php",
 		"oF": 0
 		},
 	"/modules/slugs/page-home.php": {
@@ -2539,6 +2229,25 @@
 		"oAP": "/modules/slugs/page-webinar.php",
 		"oF": 0
 		},
+	"/README.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
 	"/screenshot.jpg": {
 		"ft": 16384,
 		"iS": 66297,
@@ -2558,14 +2267,6 @@
 		"oAP": "/sidebar.php",
 		"oF": 0
 		},
-	"/single-articles-copy.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/single-articles-copy.php",
-		"oF": 0
-		},
 	"/single-articles.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -2582,44 +2283,12 @@
 		"oAP": "/single-glossaries.php",
 		"oF": 0
 		},
-	"/single-investor copy.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/single-investor copy.php",
-		"oF": 0
-		},
 	"/single-investor.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 2,
 		"oAP": "/single-investor.php",
-		"oF": 0
-		},
-	"/single-landing-investment-copy2.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/single-landing-investment-copy2.php",
-		"oF": 0
-		},
-	"/single-landing-investment-copy3.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/single-landing-investment-copy3.php",
-		"oF": 0
-		},
-	"/single-landing-investment.copy.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/single-landing-investment.copy.php",
 		"oF": 0
 		},
 	"/single-landing-investment.php": {
@@ -2686,93 +2355,6 @@
 		"hM": 0,
 		"oA": 2,
 		"oAP": "/taxonomy-topic_category.php",
-		"oF": 0
-		},
-	"/temp/bg-download.jpg": {
-		"ft": 16384,
-		"iS": 98051,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/temp/bg-download.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/temp/bg-features.jpg": {
-		"ft": 16384,
-		"iS": 213005,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/temp/bg-features.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/temp/bg-header-hero.jpg": {
-		"ft": 16384,
-		"iS": 411151,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/temp/bg-header-hero.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/temp/bg-highlights.jpg": {
-		"ft": 16384,
-		"iS": 59432,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/temp/bg-highlights.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/temp/odyssey-1080p-old.mp4": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/temp/odyssey-1080p-old.mp4",
-		"oF": 0
-		},
-	"/temp/odyssey-1080p.mp4": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/temp/odyssey-1080p.mp4",
-		"oF": 0
-		},
-	"/temp/odyssey-720p-old.mp4": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/temp/odyssey-720p-old.mp4",
-		"oF": 0
-		},
-	"/temp/odyssey-720p-snapshot.jpg": {
-		"ft": 16384,
-		"iS": 196159,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/temp/odyssey-720p-snapshot.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/temp/odyssey-720p.mp4": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/temp/odyssey-720p.mp4",
 		"oF": 0
 		}
 	},

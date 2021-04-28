@@ -104,7 +104,7 @@ $_GET['rkp'] = get_field('contact_name');
           <img src="<?php echo _uri.'/assets/images/book-cover-booklet.jpg'; ?>" alt="Free 36-Page Booklet Real Estate Investing with the Lessons of 2020">
           <figcaption>
               <h4><span>Download Free 36-Page:</span> Real Estate Investing with the Lessons of 2020</h4>
-              <a href="<?php echo __(site_url( '/1031-exchange-information?q=bookletform#NASISEIG' )); ?>">Download Free Booklet Here</a>
+              <a href="<?php echo __(site_url( '/1031-exchange-information?q=booklet#NASISEIG' )); ?>">Download Free Booklet Here</a>
           </figcaption>
         </figure>
       </div>

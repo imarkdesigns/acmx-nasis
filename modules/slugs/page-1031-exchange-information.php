@@ -17,7 +17,7 @@ $firstname = explode(" ", $firstname);
         <li><a href="#TaxRates" data-uk-smooth-scroll="{offset: 70}">Tax Rates by State</a></li>
         <li><a href="<?php echo __(site_url('1031-exchange-information/1031-exchange-articles')); ?>">Real Estate investment Articles</a></li>
         <li><a href="<?php echo __(site_url('1031-exchange-information/faqs')); ?>">FAQ’s</a></li>
-        <li><a href="<?php echo __(site_url('1031-exchange-information#EIG')); ?>" data-uk-smooth-scroll="{offset: 70}">Download 1031 Guide</a></li>
+        <li><a href="<?php echo __(site_url('1031-exchange-information?q=guide#NASISEIG')); ?>" data-uk-smooth-scroll="{offset: 70}">Download 1031 Guide</a></li>
         <li><a href="<?php echo __(site_url('1031-exchange-information/glossary')); ?>">Glossary</a></li>
       </ul>
     </div>
@@ -317,8 +317,8 @@ $firstname = explode(" ", $firstname);
 	    ?>
 
         <ul class="uk-tab" data-uk-tab="{connect:'#my-id', animation: 'uk-animation-fade'}">
-            <li class="<?php echo ( $tab == 'guide' || $switch == 'guide' ) ? 'uk-active' : ''; ?>"><a href="">Download Our Free 1031 Exchange Guides</a></li>
-            <li class="<?php echo ( $tab == 'bookletform' || $switch == 'booklet' ) ? 'uk-active' : ''; ?>"><a href="">Download FREE Investment White Papers</a></li>
+            <li class="<?php echo ( $tab == 'guide' && $switch == 'guide' ) ? 'uk-active' : ''; ?>"><a href="">Download Our Free 1031 Exchange Guides</a></li>
+            <li class="<?php echo ( $tab == 'bookletform' && $switch == 'booklet' ) ? 'uk-active' : ''; ?>"><a href="">Download FREE Investment White Papers</a></li>
         </ul>
 
         <ul id="my-id" class="uk-switcher">

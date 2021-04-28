@@ -12,7 +12,7 @@
         <li><a href="<?php echo __(site_url('webinar')); ?>">Webinars</a></li>
         <li><a href="<?php echo __(site_url('1031-exchange-information#TaxRates')); ?>">Tax Rates by State</a></li>
         <li><a href="<?php echo __(site_url('1031-exchange-information/1031-exchange-articles')); ?>">Real Estate investment Articles</a></li>
-        <li><a href="<?php echo __(site_url('1031-exchange-information#EIG')); ?>">Download 1031 Guide</a></li>
+        <li><a href="<?php echo __(site_url('1031-exchange-information?q=guide#NASISEIG')); ?>">Download 1031 Guide</a></li>
         <li><a href="<?php echo __(site_url('1031-exchange-information/glossary')); ?>">Glossary</a></li>
       </ul>
     </div>

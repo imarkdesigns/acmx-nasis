@@ -73,7 +73,7 @@ if ( $_COOKIE['backLink'] == 'true' ) { ?>
           <article>
             <img src="<?php echo _uri.'/assets/images/book-cover-1031EIG.jpg'; ?>" alt="">
             <h3>Download Free - 1031: A Guide Through the Tax Deferred Real Estate Investment Process.</h3>
-            <a href="<?php echo __(site_url('1031-exchange-information#EIG')); ?>" class="uk-button">Download Free Guide Here</a>
+            <a href="<?php echo __(site_url('1031-exchange-information?q=guide#NASISEIG')); ?>" class="uk-button">Download Free Guide Here</a>
           </article>
         </figcaption>
       </aside>

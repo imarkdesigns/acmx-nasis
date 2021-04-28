@@ -28,7 +28,7 @@ if ( wp_is_mobile() ) {
           <img src="<?php echo _uri.'/assets/images/book-cover-1031EIG.jpg'; ?>" alt="1031 Exchange Info Guide">
           <figcaption>
             <h4><span>Download Free 28-Page Booklet - 1031:</span> A Guide Through the Tax Deferred Real Estate Investment Process.</h4>
-            <a href="<?php echo __(site_url( '/1031-exchange-information#EIG' )); ?>">Download Free Guide Here</a>
+            <a href="<?php echo __(site_url( '/1031-exchange-information?q=guide#NASISEIG' )); ?>">Download Free Guide Here</a>
           </figcaption>
         </figure>
       </div>
@@ -37,7 +37,7 @@ if ( wp_is_mobile() ) {
           <img src="<?php echo _uri.'/assets/images/book-cover-booklet.jpg'; ?>" alt="Free 36-Page Booklet Real Estate Investing with the Lessons of 2020">
           <figcaption>
               <h4><span>Download Free 36-Page:</span> Real Estate Investing with the Lessons of 2020</h4>
-              <a href="<?php echo __(site_url( '/1031-exchange-information?tab=booklet#EIG' )); ?>">Download Free Booklet Here</a>
+              <a href="<?php echo __(site_url( '/1031-exchange-information?q=booklet#NASISEIG' )); ?>">Download Free Booklet Here</a>
           </figcaption>
         </figure>
       </div>
@@ -241,7 +241,7 @@ if ( wp_is_mobile() ) {
                     <img src="<?php echo _uri.'/assets/images/nas-guide.png'; ?>" alt="1031 Exchange Investments Guide">
                     <figcaption>
                       <h4><span>Download Free - 1031:</span> A Guide Through the Tax Deferred Real Estate Investment Process</h4>
-                      <a href="<?php echo __(site_url('1031-exchange-information#EIG')); ?>" class="uk-button uk-button-secondary __download">Download Free Guide Here</a>
+                      <a href="<?php echo __(site_url('1031-exchange-information?q=guide#NASISEIG')); ?>" class="uk-button uk-button-secondary __download">Download Free Guide Here</a>
                     </figcaption>
                   </figure>
                 </li>
@@ -250,7 +250,7 @@ if ( wp_is_mobile() ) {
                     <img src="<?php echo _uri.'/assets/images/nas-booklet.png'; ?>" alt="Real Estate Investing with the Lessons of 2020">
                     <figcaption>
                       <h4><span>Free 36-Page Booklet</span> Real Estate Investing with the Lessons of 2020: A Collection of 10 timely Articles</h4>
-                      <a href="<?php echo __(site_url('1031-exchange-information?tab=booklet#EIG')); ?>" class="uk-button uk-button-secondary __download">Download Free Booklet</a>
+                      <a href="<?php echo __(site_url('1031-exchange-information?q=booklet#NASISEIG')); ?>" class="uk-button uk-button-secondary __download">Download Free Booklet</a>
                     </figcaption>
                   </figure>
                 </li>

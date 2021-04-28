@@ -15,7 +15,7 @@ $post_sidebar = new WP_Query([ 'post_type' => 'page', 'page_id' => 1279 ]); ?>
         <li><a href="<?php echo __(site_url('1031-exchange-information#TaxRates')); ?>">Tax Rates by State</a></li>
         <li><a href="<?php echo __(site_url('1031-exchange-information/1031-exchange-articles')); ?>">Real Estate investment Articles</a></li>
         <li><a href="<?php echo __(site_url('1031-exchange-information/faqs')); ?>">FAQ’s</a></li>
-        <li><a href="<?php echo __(site_url('1031-exchange-information#EIG')); ?>">Download 1031 Guide</a></li>
+        <li><a href="<?php echo __(site_url('1031-exchange-information?q=guide#NASISEIG')); ?>">Download 1031 Guide</a></li>
       </ul>
     </div>
   </div>
