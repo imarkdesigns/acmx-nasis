@@ -8,11 +8,11 @@ $linkID = $_GET['lid'];
 ############################
 
 // NASIS Account
-$apiKey     = 'aad7ca0a2470417df5f4bb57b71cfe83-us11';
+$apiKey     = '';
 $list_id    = 'c7ece447b9';
 
 // Test Account (disable if not using)
-// $apiKey     = '1607821d6eb072f127a1108999d0a0a1-us3';
+// $apiKey     = '';
 // $list_id    = '530a1942ca';
 
 $dc         = substr($apiKey, strpos( $apiKey, "-" )+1);
