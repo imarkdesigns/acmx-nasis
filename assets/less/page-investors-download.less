@@ -1,0 +1,39 @@
+//
+// Arranged & Compiled by: Mark Rivera, imarkdesigns@gmail.com
+// Github: https://github.com/imarkdesigns
+//
+
+// Internal Libraries
+@import (less) "default/mixins";
+
+#section-investments {
+
+  .uk-grid {
+    .uk-overlay {
+      &:before { content: ''; position: absolute; top: 50%; left: 50%; display: block; .square(calc(100% - 10px)); border: 1px solid rgba(255,255,255,0.5); z-index: 1; pointer-events: none; transform: translate(-50%,-50%); }
+    }
+    
+    .section-copy { text-align: left;
+      h3 { .font(24px,@proxima); color: #FFF; margin: 0;
+        + p { .font(14px,@proxima); line-height: 1.2; margin: 5px 0 15px; -webkit-font-smoothing: subpixel-antialiased; }
+      }
+      
+      .uk-button-group { border-radius: 2px; overflow: hidden;
+        a { background-color: @maincolor; .font(13px,@proxima); -webkit-font-smoothing: subpixel-antialiased; }        
+        button { background-color: @altcolor; font-size: 13px; color: #FFF; }
+      }
+      
+      .uk-form-help-block { display: block; font-size: 12px; color: #FFF; line-height: 1.2; -webkit-font-smoothing: subpixel-antialiased;
+        i { color: @altcolor; }
+      }
+      
+      .button-floating { position: absolute; top: 15px; left: 15px; .font(13px,@proxima); -webkit-font-smoothing: subpixel-antialiased;
+        a.uk-icon-button { background-color: @brandcolor; color: #FFF; text-indent: 2px; line-height: 50px; .square(50px); vertical-align: middle; }
+        span { position: relative; top: 7px; left: 5px; display: inline-block; text-transform: capitalize; line-height: 1; }
+      }
+    }
+    
+    img { min-height: 350px; object-fit: cover; }
+  }
+
+}

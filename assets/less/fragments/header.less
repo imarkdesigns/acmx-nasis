@@ -1,0 +1,266 @@
+//
+// Arranged & Compiled by: Mark Rivera, imarkdesigns@gmail.com
+// Github: https://github.com/imarkdesigns
+//
+
+.EIG1031 {
+    position: relative;
+    background: #222;
+
+    // Close
+    .uk-close {
+        position: absolute;
+        top: 7px;
+        right: 7px;
+        opacity: 1;
+
+        &::after {
+            color: #888;
+        }
+    }
+
+    .uk-container {
+        padding: 30px;
+    }
+
+    figure {
+        height: 100%;
+    }
+
+    figcaption {
+        h4 {
+            font-family: @prata;
+            font-size: 14px;
+            color: #FFF;
+            line-height: 1.4;
+            margin: 0 0 5px;
+            -webkit-font-smoothing: antialiased;
+
+            span {
+                display: inline;
+            }
+        }
+
+        a {
+            font-family: @proxima;
+            font-size: 13px;
+            color: @maincolor;
+            border-bottom: 1px dotted rgba(@maincolor, .25);
+        }        
+    }
+
+    img {
+        margin-right: 15px;
+        margin-top: -2px;
+        border-radius: 2px;
+        vertical-align: middle;
+    }
+
+    @media ( min-width: 960px ) {
+
+        figcaption h4 {
+            font-size: 18px;
+
+            span {
+                display: block;
+            }
+
+            a {
+                font-size: 14px;
+            }
+        }
+
+    }
+}
+
+.hero-gallery { position: relative; max-height: 800px; overflow: hidden;
+
+  .uk-overlay canvas {
+    min-height: 568px;
+  }
+
+  .uk-overlay img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+  // Slides Container
+  .uk-slideshow,
+  .uk-slideshow li { height: 800px !important; }
+
+  .uk-overlay-background { background: rgba(0,0,0,.25); }
+
+  .uk-slidenav-previous,
+  .uk-slidenav-next { color: rgba(255,255,255,0.8); }
+
+  // Slides Caption
+  .uk-overlay-panel { padding: 0;
+    article { font-family: @proxima; margin-top: 250px;
+      h1 { .font(48px, @proxima_bold); text-transform: uppercase; line-height: 1; margin: 0; text-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+        span { color: #F36F21; }
+
+        + p {
+          font-size: 24px;
+        }
+      }
+    }
+
+    .uk-button-outline { margin-top: 5px;
+      &:hover { color: #F36F21; }
+    }
+
+    .uk-button-covid19 {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: @brandcolor;
+        font-family: @proxima_bold;
+        font-size: 14px;
+        color: #FFF;
+        text-transform: uppercase;
+        line-height: 1.4;
+        .size(auto, 42px);
+        margin-top: 5px;
+        border: 1px solid @brandcolor;
+
+        &:focus,
+        &:hover {
+            background: darken(@brandcolor, 10%);
+        }
+    }
+  }
+
+  // Slide Navigation
+  .uk-dotnav { display: flex; align-items: center; height: 100px; margin: 0;
+    > li { margin: 0 5px; padding: 0;
+      &.uk-active > * { background: #F36F21; }
+    }
+    > * > * { width: 50px; height: 3px; border-radius: 0; }
+  }
+
+  // Media Queries
+  @media only screen and ( max-width: 1599px ) {
+    .uk-slidenav-position .uk-slidenav { display: none; }
+  }
+
+  @media only screen and ( max-width: 1199px ) {
+    .uk-slideshow,
+    .uk-slideshow li { height: 667px !important; }
+
+    .uk-overlay-panel {
+      article h1 { font-size: 32px; line-height: 1; }
+    }
+  }
+
+  @media only screen and ( max-width: 767px ) {
+    .uk-slideshow,
+    .uk-slideshow li { height: 568px !important; }
+
+    .uk-overlay-panel {
+      article { margin-top: 150px;
+        h1 { font-size: 24px; }
+      }
+    }
+  }
+}
+
+
+
+.hero-page,
+.hero-post { position: relative; height: 375px;
+
+  .uk-overlay-background { background: rgba(0,0,0,.25); }
+
+  .uk-overlay { position: relative; .size(100%,375px); -webkit-font-smoothing: subpixel-antialiased;
+    img { position: absolute; top: 50%; left: 50%; width: 100%; min-width: 1600px; min-height: 375px; transform: translate(-50%,-50%); }
+
+    .uk-container { margin-bottom: 50px;
+      h1 { .font(32px,@prata); color: #FFF; text-transform: uppercase; text-align: center; line-height: 1; }
+    }
+  }
+
+  &.referral {
+
+    .uk-container h1 {
+        font-family: 'Prata', Times, serif;
+        font-size: 42px;
+        line-height: 1.4;
+
+        small {
+            display: block;
+            .font(16px,@proxima);
+        }
+    }
+
+    height: 480px;
+
+    .uk-overlay {
+        height: 480px;
+    }
+
+  }
+
+  &._taxonomy {
+    small {
+      display: block;
+      margin-bottom: 5px;
+    }
+  }
+
+}
+
+.hero-post { height: 550px;
+
+  .uk-overlay { height: 550px;
+    img { min-height: 550px; }
+  }
+
+}
+
+
+// BackLink
+._backlinks {
+
+    background: #000;
+    padding: 7px 15px;
+
+    a {
+        font-size: 12px;
+    }
+
+    a, i {
+        color: darken(@brandcolor, 5%);
+    }
+
+    i {
+        position: relative;
+        top: 1px;
+        margin-right: 5px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

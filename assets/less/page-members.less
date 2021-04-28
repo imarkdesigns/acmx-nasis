@@ -1,0 +1,45 @@
+//
+// Arranged & Compiled by: Mark Rivera, imarkdesigns@gmail.com
+// Github: https://github.com/imarkdesigns
+//
+
+// Internal Libraries
+@import (less) "default/mixins";
+
+#section-profile { text-align: center; margin-top: -175px; padding: 0;
+
+  .uk-panel { position: relative; .size(216px,320px); margin: auto; border-radius: 3px; box-shadow: 0 2px 8px 0 rgba(0,0,0,0.25);
+    &:before { content: ''; position: absolute; top: 50%; left: 50%; display: block; .square(calc(100% - 10px)); border: 1px solid rgba(255,255,255,0.5); z-index: 1; border-radius: 5px; pointer-events: none; transform: translate(-50%,-50%); }
+    
+    img { max-height: 320px; border-radius: 3px; }
+  }
+  
+  hgroup { margin-top: 25px;
+    .uk-heading-large { .font(32px,@proxima_light); line-height: 1.4; margin: 0;
+      + h3 { .font(18px,@proxima_light); color: #AC9C8F; margin: 0; }
+    }
+  }
+  
+  .uk-heading-line {
+    .uk-list { margin: 25px 0 15px;
+      li { display: inline-block; padding: 0 2.5px;
+        a { display: block; background: #AC9C8F; color: #FFF; line-height: 48px; .square(50px); border: 1px solid transparent; border-radius: 50%; transition: 300ms ease-out;
+          &:hover { box-shadow: 0 0 0 5px fade(@brandcolor,75%); }
+        }
+      }
+    }
+  }
+  
+  .phone-selections { display: flex; justify-content: center;
+    .uk-subnav { padding: 15px 0;
+      li { 
+        a { .font(14px,@proxima_light); color: #444; width: auto;
+          &:before { font-family: FontAwesome; margin-right: 5px; }
+        }
+      }
+    }
+  }
+  
+}
+
+#section-bio { padding-top: 25px; }

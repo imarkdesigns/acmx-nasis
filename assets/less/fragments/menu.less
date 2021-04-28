@@ -1,0 +1,171 @@
+.globalnav { 
+    position: absolute; 
+    top: 0;
+    left: 0; 
+    right: 0; 
+    background: fade(#000,60%); 
+    .size(100%,80px); 
+    z-index: 500;
+
+    &.uk-active {
+        background: rgba(#000,95%);
+    }
+
+    &.gn-fixed {
+        position: relative;
+        background: rgba(#000,95%);
+    }
+
+    .uk-navbar { position: relative; background: transparent; padding: 0 30px; z-index: 100; }
+    .uk-navbar-brand { position: relative; background: url('@{imgs}nasis-logo.svg') no-repeat center / 158px auto; text-indent: 100%; .size(158px,80px); padding: 0; overflow: hidden; white-space: nowrap; z-index: 1; }
+
+    .uk-navbar-flip {
+        position: relative;
+        display: flex;
+        align-items: center;
+        .size(auto, 80px);
+        z-index: 1;
+
+        .uk-navbar-nav {
+            display: none;
+        }
+
+        .uk-navbar-nav > li {
+            display: flex;
+            align-items: center;
+            height: 30px;
+            margin: 0;
+        }
+
+        .uk-navbar-nav > li > a:not(.uk-button) {
+            background: transparent;
+            .font(12px, @proxima);
+            font-weight: 700;
+            color: #FFF;
+            text-transform: uppercase;
+            padding: 0 8px;
+            cursor: pointer;
+            transition: color 300ms ease-out;
+
+            &:hover {
+                color: #F36F21;
+            }
+        }
+
+        .uk-icon-caret-down {
+            position: relative;
+            left: 3px;
+        }
+
+        .uk-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #F36F21;
+            font-size: 11px;
+            font-weight: 700;
+            color: #FFF;
+            text-transform: uppercase;
+            line-height: normal;
+            height: auto;
+            margin: 0 0 0 5px;
+            padding: 4px 8px 5px;
+            border-radius: 3px;
+        }
+
+        .uk-navbar-toggle {
+            appearance: none;
+            display: block;
+            background: none;
+            color: #FFF;
+            border: none;
+        }
+
+    }
+
+    .uk-dropdown {
+        top: 54px !important;
+        background: transparent;
+        padding: 0;
+        box-shadow: 0 -1px 0 0 #F36F21;
+
+        .uk-nav {
+            margin: 0;
+        }
+    }
+
+    .uk-nav-dropdown > li {
+        background: rgba(#000,90%);
+        margin: 0;
+        border-top: 1px solid rgba(172,156,143,25%);
+        transition: background 300ms ease-out;
+
+        &.uk-nav-header {
+            background: darken(#AC9C8F,35%);
+            font-size: 12px;
+            color: #FFF;
+
+            &:hover {
+                background: darken(#AC9C8F,25%);
+            }
+        }
+
+        &:focus,
+        &:hover {
+            background: rgba(#F36F21,90%);
+        }
+    }
+
+    .uk-nav-dropdown > li > a {
+        font-size: 12px;
+        font-weight: 700;
+        color: #FFF;
+        text-transform: uppercase;
+        line-height: 1.2;
+        padding: 15px 12px;
+
+        &:focus,
+        &:hover {
+            background: none;   
+        }
+    }
+
+    .uk-icon-caret-down {
+        position: relative;
+        left: 2px;
+    }    
+
+    .uk-dropdown-grid {
+        background: rgba(#000,90%);
+        border-radius: 0 0 3px 3px;
+        margin: 0 !important;
+        overflow: hidden;
+
+        .uk-width-1-3,
+        .uk-width-1-2,
+        .uk-width-1-1 {
+            padding: 0 !important;
+        }
+
+        .uk-width-1-1 {
+            border: 0 !important;
+        }
+    }
+    
+    // Set responsive effect after 1200px screen
+    @media ( min-width: 1200px ) {
+
+        .uk-navbar-flip {
+            .uk-navbar-toggle {
+                display: none;
+            }
+        
+            .uk-navbar-nav {
+                display: block;
+            }
+        }
+
+    }
+
+}
+

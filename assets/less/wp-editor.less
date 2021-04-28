@@ -1,0 +1,49 @@
+//
+// Arranged & Compiled by: Mark Rivera, imarkdesigns@gmail.com
+// Github: https://github.com/imarkdesigns
+//
+
+// Internal Libraries
+@import (less) "default/mixins";
+
+* {
+  &, &:before, &:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+body { font: 300 16px sans-serif; color: #444; line-height: 1.33349; margin: 15px; vertical-align: baseline;
+
+  // Direct Style of Body
+  > h1:first-child,
+  > h2:first-child,
+  > h3:first-child,
+  > h4:first-child,
+  > h5:first-child,
+  > h6:first-child,
+  > p:first-child,
+  > ul:first-child,
+  > ol:first-child,
+  > blockquote:first-child { margin-top: 0; }
+
+  h1, h2, h3, h4, h5, h6 { font-weight: 400 !important; }
+  ul { padding-left: 45px !important }
+  p { margin-bottom: 0; }
+
+  small { font-size: 16px; }
+
+}
+
+.section-headline { font-size: 42px; text-align: center; line-height: 1; margin: 0 auto 30px;
+
+  small { display: block; text-transform: capitalize; }
+
+}
+
+.mce-content-body {
+  
+  > h1 { line-height: 1; }
+  
+}

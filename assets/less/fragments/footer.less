@@ -1,0 +1,145 @@
+//
+// Arranged & Compiled by: Mark Rivera, imarkdesigns@gmail.com
+// Github: https://github.com/imarkdesigns
+//
+
+.globalfooter { position: relative; box-shadow: 0 2px 8px 0 rgba(0,0,0,0.15); z-index: 100; padding: 50px 0;
+
+  ._mailchimp { min-height: 100px; margin-top: 0; }
+  
+  .column { font-size: 12px; text-transform: uppercase;
+    &:nth-child(1) {
+      ul { list-style: none; line-height: 1.4; margin: 0; padding: 0;
+        li { display: inline-block; }
+      }
+    }
+    &:nth-child(2) { display: flex; justify-content: flex-end;
+      
+      a { color: inherit !important; }
+      a:hover { background: transparent; color: @maincolor; }
+    }
+  
+    .uk-subnav-pill li {
+      margin-top: 0;
+    }
+  }
+ 
+}
+
+@media only screen and ( max-width: 1199px ) {
+
+  .globalfooter {
+    .column:nth-child(1) { text-align: center; }
+  }
+
+}
+
+// WPForm - MailChimp
+._mailchimp {
+  //background: pink;
+
+  div:nth-child(1) {
+    //background: grey;
+  }
+
+  div:nth-child(2) {
+    //background: gray;
+  }
+
+}
+
+
+.form-mailchimp {
+  
+  // Wrap both fields + button
+  .wpforms-form {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  .wpforms-field-container {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    max-width: calc( 100% - 150px ) !important;
+  }
+
+  .wpforms-field {
+    flex: 1 0 auto;
+    align-self: auto;
+    width: calc( (100% / 6) + 1px ) !important;
+    margin-left: -1px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  input[type=text],
+  input[type=email],
+  select {
+    position: relative;
+    font: normal 12px 'Open Sans' !important;
+    color: #666 !important;
+    height: 36px !important;
+    margin-bottom: 0 !important;
+    appearance: none;
+  }
+
+  button[type=submit] {
+    background-color: #F37021 !important;
+    font-family: 'Open Sans' !important;
+    font-size: 13px !important;
+    color: #FFF !important;
+    text-transform: uppercase;
+    width: 150px !important;
+    height: 36px !important;
+    border: 0;
+  }
+
+  select {
+    text-transform: uppercase !important;
+  }
+
+  option:disabled {
+    color: #666 !important;
+  }
+
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #666;
+    text-transform: uppercase !important;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: #666;
+    text-transform: uppercase !important;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: #666;
+    text-transform: uppercase !important;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: #666;
+    text-transform: uppercase !important;
+  }
+
+  @media ( max-width: 959px ) {
+    .wpforms-form {
+      float: none;
+      flex-flow: column wrap;
+    }
+
+    .wpforms-field-container {
+      flex-flow: column wrap;
+      max-width: 100% !important;
+    }
+
+    .wpforms-field {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-bottom: 5px !important;
+        padding: 0 !important;
+    }    
+  }
+
+}
+

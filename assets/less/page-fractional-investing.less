@@ -1,0 +1,159 @@
+//
+// Arranged & Compiled by: Mark Rivera, imarkdesigns@gmail.com
+// Github: https://github.com/imarkdesigns
+//
+
+// Internal Libraries
+@import (less) "default/mixins";
+
+#section-fractional-investing {
+  a {
+    color: #90c43d;
+    border-bottom: 1px dotted fade(#90c43d,50%);
+  }
+}
+
+.--books-banner {
+    position: relative;
+    background: url('@{imgs}1031-exchange-download.jpg') no-repeat center / cover;
+    width: 100%;
+    min-height: 320px;
+    border-radius: 5px;
+
+    // Slide Controls
+    .uk-dotnav {
+        height: 40px;
+        margin-bottom: 0; 
+
+        > * > * {
+            width: 10px;
+            height: 10px;
+        }
+    }
+
+    figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        height: 100%;
+        padding: 30px 30px 50px;
+
+        img {
+            order: 0;
+            width: auto;
+            height: 250px;
+            margin-bottom: 15px;
+        }
+
+        figcaption {
+            order: 1;
+            text-align: center;
+        }
+
+        h4 {
+            font-family: @prata;
+            color: #FFF;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .uk-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: @maincolor;
+            font-size: 14px;
+            color: #FFF;
+            line-height: normal;
+            height: 45px;
+            padding: 0 20px;
+            border: 0;
+            border-radius: 3px;
+
+            &:focus,
+            &:hover {
+                background: darken(@maincolor, 5%);
+                color: #FFF;
+            }
+        }
+    }
+
+    @media ( min-width: 960px ) {
+
+        figure {
+            flex-direction: row;
+
+            img {
+                order: 1;
+                margin-left: 15px;
+                margin-bottom: 0;
+            }
+
+            figcaption {
+                order: 0;
+                text-align: right;
+                max-width: 400px;
+
+                h4 {
+                    font-size: 24px;
+                    line-height: 1.4;
+                }
+
+                h4 span {
+                    display: block;
+                }
+            }
+        }
+
+    }
+
+}
+
+.referral-program {
+    
+    text-align: center;
+    margin-top: 30px;
+    border-radius: 5px;
+    
+    img {
+        min-height: 340px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .uk-overlay-background {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        background: fade(#000, .5);
+        padding-top: 30px;
+        padding-bottom: 30px;
+        box-sizing: border-box;
+    }
+    
+    .uk-overlay-panel h4 {
+        font-family: "Prata", Times, serif;
+        font-size: 24px;
+        text-transform: uppercase;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+    
+    .uk-overlay-panel p {
+        font-family: @proxima_bold;
+        text-transform: uppercase;
+    }
+    
+    .uk-overlay-panel a {
+        display: inline-block;
+        background: #8EC23B;
+        font-family: @proxima_bold;
+        color: #FFF !important;
+        text-transform: uppercase;
+        line-height: normal;
+        padding: 10px 15px;
+        border-radius: 3px;        
+    }
+    
+}

@@ -1,0 +1,65 @@
+//
+// Arranged & Compiled by: Mark Rivera, imarkdesigns@gmail.com
+// Github: https://github.com/imarkdesigns
+//
+
+// Internal Libraries
+@import (less) "default/mixins";
+
+#section-about {
+  a {
+    color: #90c43d;
+    border-bottom: 1px dotted fade(#90c43d,50%);
+  }
+}
+
+
+.referral-program {
+    
+    text-align: center;
+    margin-top: 30px;
+    border-radius: 5px;
+    
+    img {
+        min-height: 340px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+
+    .uk-overlay-background {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        background: fade(#000, .5);
+        padding-top: 30px;
+        padding-bottom: 30px;
+        box-sizing: border-box;
+    }
+    
+    .uk-overlay-panel h4 {
+        font-family: "Prata", Times, serif;
+        font-size: 24px;
+        text-transform: uppercase;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+    
+    .uk-overlay-panel p {
+        font-family: @proxima_bold;
+        text-transform: uppercase;
+    }
+    
+    .uk-overlay-panel a {
+        display: inline-block;
+        background: #8EC23B;
+        font-family: @proxima_bold;
+        color: #FFF !important;
+        text-transform: uppercase;
+        line-height: normal;
+        padding: 10px 15px;
+        border-radius: 3px;        
+    }
+    
+}

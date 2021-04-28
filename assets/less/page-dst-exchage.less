@@ -1,0 +1,565 @@
+//
+// Arranged & Compiled by: Mark Rivera, imarkdesigns@gmail.com
+// Github: https://github.com/imarkdesigns
+//
+
+// Internal Libraries
+@import (less) "default/mixins";
+
+.local-nav {
+
+  background: transparent;
+
+  .uk-navbar-flip {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #DDD;
+  }
+
+  .uk-navbar-nav > li > a {
+    &:focus,
+    &:hover {
+      background: none;
+      color: #F37021;
+    }
+  }
+
+}
+
+.section-exchange {
+
+  a {
+    color: #90c43d;
+    border-bottom: 1px dotted fade(#90c43d,50%);
+  }
+
+  h3 {
+    font-family: @proxima;
+    font-size: 24px;
+  }
+
+  table, table td {
+    padding: 15px;
+    border: 1px solid #DDD;
+
+    strong {
+      font-weight: 700;
+      display: block;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      position: relative;
+      margin-top: 15px;
+      padding-left: 25px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 2px;
+        background: #DDD;
+        width: 8px;
+        height: 10px;
+        border-top: 5px solid #F37021;
+        box-sizing: content-box;
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+
+  // Side Panel
+  .at-glance h3,
+  .faqs h3 {
+    font-family: @prata;
+    font-size: 22px;
+  }
+
+  .at-glance,
+  .faqs {
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+    padding-top: 27px;
+    border-top: 3px solid #AB9C8F;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -3px;
+      left: 0;
+      background: #F37021;
+      width: 100px;
+      height: 3px;
+    }
+  }
+
+  .at-glance {
+    margin-top: 0;
+
+
+  }
+
+  .faqs {
+  
+    .uk-form-icon > .uk-icon-search {
+      top: calc( 50% - 4px );
+      left: auto;
+      right: 0;
+    }
+
+    .uk-accordion {
+      margin-top: 30px;
+
+      .uk-accordion-title {
+        background: none;
+        font-size: 16px;
+        font-family: @proxima;
+        margin: 15px 0 0;
+        padding: 0;
+        border: none;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+
+      .uk-accordion-content {
+        position: relative;
+        color: #777;
+        padding: 15px 0 15px 25px;
+        
+        &::before {
+          content: "\f10d";
+          position: absolute;
+          top: 15px;
+          left: 0;
+          font-family: "FontAwesome";
+          color: #90c43d;
+        }
+      }
+    }
+
+    hr {
+      display: block;
+      margin: 30px 0;
+    }
+
+    .uk-button-success {
+      font-size: 14px;
+      color: #FFF;
+      line-height: 1.2;
+      padding: 12px 15px 10px;
+      border-radius: 3px;
+    }
+
+  }
+
+}
+
+
+.section-tax-rates {
+
+  color: rgba(#FFF, .8);
+
+  h2 {
+    font-family: @prata;
+    color: #AB9C8F;
+    text-transform: uppercase;
+    text-align: center;
+
+    span {
+      display: block;
+      .font(14px, @proxima);
+      font-style: italic;
+      color: rgba(#FFF, .8);
+      text-transform: capitalize;
+    }
+  }
+
+  h3 {
+    .font(24px, @prata);
+    color: #FFF;
+  }
+
+  form {
+    margin: 30px 0;
+  }
+
+  .uk-button-default {
+    font-size: 14px;
+    line-height: 1.2;
+    padding: 12px 15px 10px;
+    border-radius: 3px;
+  }
+
+
+  .uk-grid {
+    > .uk-width-medium-2-3 {
+      max-width: calc( 100% - 500px );
+      width: 100%;
+    }
+
+    > .uk-width-medium-1-3 {
+      max-width: 500px;
+      width: 100%;
+    }
+  }
+
+  @media only screen and ( max-width: 959px ) {
+    .uk-grid {
+      > .uk-width-medium-2-3,
+      > .uk-width-medium-1-3 {
+        max-width: 100%;
+      }
+    }
+  }
+
+  // SVG Radial Progress
+  .svg-wrapper {
+    display: block;
+    .square(200px);
+    margin: auto;
+  }
+
+  .progress {
+    width: 200px;
+    height: 200px;
+  }
+
+  .progress .track,
+  .progress .fill {
+    fill: rgba(0, 0, 0, 0);
+    stroke-width: 4;
+    transform: rotate(90deg)translate(0px, -80px);
+  }
+
+  .progress .track {
+    stroke: rgba(56,71,83, 1);
+  }
+
+  .progress .fill {
+    stroke: rgb(255, 255, 255);
+    stroke-dasharray: 219.99078369140625;
+    stroke-dashoffset: -219.99078369140625;
+    transition: stroke-dashoffset 1s;
+  }
+
+  .progress.green .fill {
+    stroke: rgba(#92C800, 1);
+  }
+
+  .progress.orange .fill {
+    stroke: rgba(#F37021, 1);
+  }
+
+  .progress .value,
+  .progress .text {
+    font-family: @prata;
+    font-size: 13px;
+    text-anchor: middle;
+  }
+
+  .noselect {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    cursor: default;
+  }
+
+  h4 {
+    position: relative;
+    font-family: @prata;
+    color: #AB9C8F !important;
+    text-align: center;
+    line-height: 1.2;
+    margin-top: 15px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 30%;
+      margin: 0 auto 15px;
+      border-top: 1px solid rgba(#FFF, .5);
+    }
+
+    small {
+      display: block;
+      font-family: @proxima;
+      color: #888;
+    }
+  }
+
+}
+
+
+.section-articles {
+
+  h2, h3 {
+    font-family: @prata;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+
+  .uk-article {
+    font-size: 16px;
+    margin-top: 20px;
+
+    h4 {
+      .font(16px, @proxima);
+      font-weight: 600;
+    }
+
+    a {
+      font-size: 14px;
+      color: #90c43d;
+      border-bottom: 1px dotted fade(#90c43d,50%);
+    }
+  }
+
+  .uk-contrast {
+    background: #222;
+    color: rgba(#FFF, .8);
+    padding: 40px;
+  }
+
+  .uk-button-success {
+    font-size: 14px;
+    color: #FFF;
+    line-height: 1.2;
+    padding: 12px 15px 10px;
+    border-radius: 3px;
+  }
+
+
+  // WPForms Style
+  div.wpforms-container-full .wpforms-field {
+    padding: 1% 0 !important;
+  }
+
+  div.wpforms-container-full .wpforms-field-container .wpforms-one-half {
+    width: 49% !important;
+    margin-left: 2% !important;
+
+    &.wpforms-first {
+      margin-left: 0 !important;
+    }
+  }
+
+  div.wpforms-container-full .wpforms-form input[type=radio] {
+    position: relative;
+    top: 2px;
+  }
+
+  div.wpforms-container-full .wpforms-field label {
+    font-weight: 400;
+
+    span {
+      color: #888;
+    }
+  }
+
+  div.wpforms-container-full .wpforms-form input[type=text],
+  div.wpforms-container-full .wpforms-form input[type=email],
+  div.wpforms-container-full .wpforms-form input[type=tel],
+  div.wpforms-container-full .wpforms-form select {
+    border-radius: 3px !important;
+  }
+
+  div.wpforms-container-full .wpforms-form input[type=text],
+  div.wpforms-container-full .wpforms-form input[type=email],
+  div.wpforms-container-full .wpforms-form input[type=tel],
+  div.wpforms-container-full .wpforms-form select,
+  div.wpforms-container-full .wpforms-form textarea {
+    
+    position: relative; 
+    font-size: 15px !important;
+
+  }
+
+  div.wpforms-container-full .wpforms-form button[type=submit] {
+    
+    position: relative;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    background: #92C800 !important;
+    color: #FFF !important;
+    text-transform: uppercase;
+    line-height: 1.2;
+    padding: 12.5px 25px 11px !important;
+    border: 0 !important;
+    border-radius: 3px;
+
+  }
+
+}
+
+
+.section-router {
+  padding: 0;
+ 
+  .uk-grid > div {
+    background: #F3F0E9;
+    padding: 70px;
+
+    &:nth-child(2) {
+      background: rgba(#F3F0E9, .45);
+    }
+  }
+
+  .uk-panel {
+    text-align: center;
+    // padding: 40px 70px;
+
+    p:last-child {
+      margin-top: 30px;
+    }
+  }
+
+  .uk-button-default {
+    background: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    padding: 12px 20px 10px;
+    border-radius: 3px;
+    border: 1px solid #888;
+  }  
+}
+
+//########## Tax Rates by States
+
+.mapsvg-tooltip {
+  padding: 15px !important;
+
+  h4 {
+    font-family: @prata;
+    text-align: center;
+    margin: 0;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 50px;
+      margin: 5px auto 10px;
+      border-bottom: 1px solid #DDD;
+    }
+  }
+
+  p {
+    font-size: 11px;
+    color: #888;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin: 0;
+
+    span.value {
+      display: block;
+      font-family: @prata;
+      font-size: 16px;
+      color: #AB9C8F;
+      margin-top: 10px;
+    }
+  }
+}
+
+.tax-rate-table {
+  table {
+    border-radius: 3px;
+    overflow: hidden;
+
+    thead {
+      background: #444;
+      color: #FFF;
+    }
+
+    tbody {
+      tr:nth-child(even) {
+        background: #FFF;
+      }
+
+      td {
+        font-size: 14px;
+      }
+    }
+
+    td, th {
+      font-weight: 400;
+      padding: 15px;
+    }
+  }
+}
+
+//########## 1031 Exchange Calculator
+
+.exchange-calculator {
+
+  fieldset {
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto 15px;
+  }
+
+  .uk-panel {
+    padding: 30px;
+    border: 1px solid #EEE;
+    border-radius: 3px;
+  }
+
+  .uk-panel-title {
+    .font(16px, @proxima);
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .uk-button-default,
+  .uk-button-primary {
+    font-size: 14px;
+    line-height: 1.2;
+    padding: 12px 15px 10px;
+    border-radius: 3px;
+  }
+
+  .uk-button-primary {
+    color: #FFF;
+  }
+
+  select {
+    font-family: @proxima;
+    font-size: 14px;
+  }
+
+  label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  input[type="text"] {
+    text-align: center;
+  }
+
+}

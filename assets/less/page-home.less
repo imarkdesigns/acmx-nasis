@@ -1,0 +1,265 @@
+//
+// Arranged & Compiled by: Mark Rivera, imarkdesigns@gmail.com
+// Github: https://github.com/imarkdesigns
+//
+
+// Internal Libraries
+@import (less) "default/mixins";
+
+#section-introduction {
+
+  .section-copy { text-align: center;
+    h2 { .font(42px,@proxima_light); line-height: 1;
+      small { display: block; .font(12px,@proxima); color: #666; text-transform: uppercase; letter-spacing: 1px; }
+    }    
+    blockquote { font-style: normal; margin: 25px 0 75px; padding: 0; border: none;
+      p { margin: 0; 
+        &:last-child { text-align: right; line-height: 1.2; margin-top: 25px; }
+      }
+    }
+  }
+
+  .uk-grid {
+    .uk-panel { padding-left: 100px;
+      .uk-panel-title { line-height: 1.2; }
+    }
+    figure { position: absolute; top: 0; left: 0; .square(80px); border: 1px solid #DDD; border-radius: 50%;
+      img { .square(24px); }
+    }
+  }
+
+}
+
+#CompanyVideo {
+  position: relative;
+  background: #F6F6EE url('@{imgs}nasis-video-background.jpg') no-repeat center / cover;
+  padding: 70px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(#000,75%);
+    .square(100%);
+    z-index: 1;
+  }
+
+  .uk-container {
+    position: relative;
+    color: #FFF;
+    text-align: center;
+    max-width: 720px;
+    box-sizing: content-box;
+    z-index: 2;
+  }
+
+  hgroup {
+    margin-bottom: 30px;
+
+    h2 {
+      .font(42px,@proxima_light);
+      color: #FFF;
+      line-height: 1;
+      margin: 0 0 30px;
+    }
+
+    h4 {
+      .font(18px,@proxima_light);
+      color: #FFF;
+      margin: 0 0 5px;
+    }
+  }
+}
+
+#section-testimonials {
+  // background: #4E5B6C url('@{imgs}background-4.jpg') repeat center / contain;
+  background: #222;
+  color: #FFF;
+
+  h3 {
+    color: #FFF;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  .featured-quote {
+    border: 0;
+
+    h4 {
+      justify-content: flex-end;
+      font-size: 18px;
+      font-style: normal;
+      color: #FFF;
+      text-align: right;
+      margin: 0;
+    }
+
+    h4 small {
+      display: block;
+    }
+
+    h4 img.uk-thumbnail {
+      margin-left: 10px;
+      padding: 2px;
+    }
+
+    p {
+      position: relative;
+      font-size: 16px;
+      font-style: normal;
+      text-align: justify;
+      line-height: 1.4;
+      padding-left: 50px;
+
+      &::before {
+        content: "\f10d";
+        position: absolute;
+        top: -20px;
+        left: 0;
+        display: block;
+        font-family: FontAwesome;
+        font-size: 44px;
+        width: 30px;
+        opacity: .15;
+      }
+    }
+  }
+
+  .uk-accordion .uk-accordion-title {
+    background: none;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 0;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .uk-accordion .uk-accordion-content blockquote {
+    margin: 15px auto 0;
+    padding: 24px 0 0;
+    border: 0;
+    border-top: 1px solid rgba(255,255,255, 0.15);
+  }
+
+  .uk-accordion .uk-accordion-content blockquote {
+    
+    h4 { font-size: 18px; font-style: normal; color: #FFF; text-align: right;
+      small { display: block; }
+    }
+    
+    p { position: relative; font-size: 16px; font-style: normal; text-align: justify; padding-left: 45px;
+      &::before { content: "\f10d"; position: absolute; top: 0; left: 0; display: block; font-family: FontAwesome; font-size: 32px; width: 30px; opacity: .15; }
+    }
+
+  }
+
+
+}
+
+#section-available-investments { background: url('@{imgs}bg-available-investments.jpg') no-repeat center / cover;
+
+  .section-copy { color: #FFF; text-align: center;
+    h2 { .font(42px,@proxima_light); color: #FFF; line-height: 1; margin: 0 0 25px; }
+    p { display: block; .font(16px,@proxima); color: #FFF; max-width: 568px; margin: auto; }
+  }
+
+  .uk-grid { margin-top: 50px;
+    .section-copy { text-align: left;
+      h3 { .font(24px,@proxima_bold); color: #FFF; margin: 0;
+        + p { 
+          .font(14px,@proxima);
+          display: inline-block;
+          background: #F37021;
+          color: #FFF;
+          line-height: 1.2;
+          margin: 5px 0 0;
+          padding: 10px 15px;
+          border-radius: 3px;
+          -webkit-font-smoothing: subpixel-antialiased;
+        }
+        
+        span {
+          // color: #AD9D90;
+        }
+      }
+
+      /*
+      .uk-button-group { border-radius: 2px; overflow: hidden;
+        a { background-color: @maincolor; .font(14px,@proxima); -webkit-font-smoothing: subpixel-antialiased; }        
+        button { background-color: @altcolor; font-size: 13px; color: #FFF; }
+      }
+      
+      .uk-form-help-block { position: relative; display: block; .font(11px,@proxima); color: #FFF; line-height: 1; -webkit-font-smoothing: antialiased;
+        i { color: @altcolor; }
+      }
+      
+      .button-floating { position: absolute; top: 15px; left: 15px; .font(13px,@proxima); -webkit-font-smoothing: subpixel-antialiased;
+        a.uk-icon-button { background-color: @brandcolor; color: #FFF; text-indent: 2px; line-height: 50px; .square(50px); vertical-align: middle; }
+        span { position: relative; top: 7px; left: 5px; display: inline-block; text-transform: capitalize; line-height: 1; }
+      }
+      */
+    }
+    
+    .uk-overlay {
+      border: 5px solid fade(#FFF,25%);
+    }
+    
+    .uk-overlay-background {
+      background: linear-gradient(rgba(0,0,0,0), fade(#000,65%));
+    }
+    
+    
+    img { min-height: 350px; object-fit: cover; }
+  }
+
+  .uk-badge {
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding: 5px 8px;
+  }
+
+  .uk-panel {
+    position: absolute;
+    top: 15px;
+    right: -5px;
+    background: rgba(#AC9C8F, .90);
+    font-size: 14px;
+    color: #FFF;
+    max-width: 300px;
+    padding: 15px 25px 15px 15px;
+    border-radius: 3px 0 0 3px;
+    box-shadow: 0 5px 5px 0 rgba(#000, .14);
+    z-index: 1;
+
+    p {
+      margin: 0 0 5px;
+
+      &:first-child {
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+
+      &:last-child {
+        font-size: 14px;
+        line-height: 1.2;
+        margin-bottom: 0;
+      }
+    }
+
+    span {
+      font-weight: 700;
+    }
+
+    a {
+      font-family: @proxima_bold;
+      color: #FFF;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-bottom: 1px dotted #FFF;
+    }      
+  }
+}

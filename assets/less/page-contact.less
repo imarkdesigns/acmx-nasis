@@ -1,0 +1,39 @@
+//
+// Arranged & Compiled by: Mark Rivera, imarkdesigns@gmail.com
+// Github: https://github.com/imarkdesigns
+//
+
+// Internal Libraries
+@import (less) "default/mixins";
+
+#section-contact {
+
+  .uk-form {
+    .uk-button-danger { background-color: transparent; transition: 300ms ease-out;
+      &:hover { border-color: @maincolor; }
+    }
+    
+    // WPForms Override
+    label.wpforms-error { .font(12px,@proxima); color: @danger; -webkit-font-smoothing: subpixel-antialiased; }
+    input.wpforms-error { border-color: @danger; }
+  }
+
+  // After Form Submission
+  .wpforms-confirmation-container-full { background: @brandcolor; .font(14px,@proxima); color: #FFF; text-align: center;
+    p { margin: 0;
+      &:last-child { margin-top: 5px; }
+    }
+    p > a { display: inline-block; background: @maincolor; font-family: @proxima_bold; color: #FFF; padding: 7px 10px; border-radius: 3px; }
+  }
+  
+  .wpforms-field-description { font-size: 13px; color: #888; }
+  
+  .uk-form-help-block { font-size: 13px;
+    i { margin-right: 2.5px; }
+  }
+
+}
+
+.wpforms-container .wpforms-field {
+  clear: both;
+}

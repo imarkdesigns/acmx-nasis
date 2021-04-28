@@ -1,0 +1,199 @@
+@import (less) "default/mixins";
+
+.section-glossary-single {
+	min-height: 480px;
+
+	.uk-article {
+		margin-bottom: 60px;
+	}
+
+	.uk-article h2 {
+		font-family: @prata;
+		font-size: 28px;
+		margin: 0 0 30px;
+
+		a {
+			color: #444;
+
+			&:focus,
+			&:hover {
+				color: @brandcolor;
+			}
+		}
+	}
+
+	.uk-article p > a {
+		color: @brandcolor;
+	}
+
+	.uk-overlay {
+		position: relative;
+		min-height: 200px;
+		max-height: 320px;
+		
+		article {
+			max-width: 480px;
+		}
+
+		article h3 {
+			font-family: Prata;
+			font-size: 24px;
+			line-height: 1.25;
+			margin: 0 0 30px;
+		}
+
+		article .uk-button {
+			background: #90C43D;
+			color: #FFF;
+			padding: 10px 15px 7px;
+			border-radius: 3px;
+		}
+
+		article img {
+			float: left;
+			max-height: 200px;
+			margin-right: 30px;
+			border-radius: 2px;
+			vertical-align: middle;
+		}
+
+
+		@media ( max-width: 640px ) {
+			
+			text-align: center;
+			height: 480px;
+			max-height: 736px;
+
+			> img {
+				object-fit: cover;
+				height: 480px;
+			}
+
+			article h3 {
+				font-size: 18px;
+				line-height: normal;
+				margin-top: 30px;
+			}
+
+			article img {
+				float: none;
+				display: block;
+				margin: auto;
+			}
+
+		}
+	}
+
+	@nas-brand: #90C43D;
+	@nas-info:  #AD9D90;
+	.flex ( @direction : row; @wrap : no-wrap; @justify : flex-start; @content : flex-start; @items : flex-start; ) {
+		display: flex;
+		flex-direction: @direction;
+		flex-wrap: @wrap;
+		justify-content: @justify;
+		align-content: @content;
+		align-items: @items;
+	}
+
+	.flex-item ( @order : 0; @flex : 0 1 auto; @align : flex-start; ) {
+		order: @order;
+		flex: @flex;
+		align-self: @align;
+	}
+	
+	.glossary-wrapper { position: relative; margin-bottom: 50px; padding-bottom: 5px;
+		.list-inline { .flex(row; wrap; center; flex-start; flex-start); width: 100%; margin: 0; }
+		.list-inline > li { .flex-item(0; 0 1 auto; center); background: @nas-info; .font(13px, @proxima); color: #FFF; text-align: center; text-transform: uppercase; line-height: 32px; .square(32px); margin-left: 2px; margin-bottom: 2px; padding: 0; border: none; }
+		.list-inline > li:first-child { margin-left: 2px; }
+		.list-inline > li:hover,
+		.list-inline > li.selected { background: @nas-brand; cursor: pointer; }
+		.list-inline > li a { color: #FFF; }
+	}
+
+	.pagination a {
+		color: @maincolor;
+	}
+
+}
+
+// Side Panel
+.at-glance h3 {
+	font-family: @prata;
+	font-size: 22px;
+}
+
+.at-glance {
+	position: relative;
+	width: 100%;
+	margin-top: 40px;
+	padding-top: 27px;
+	border-top: 3px solid #AB9C8F;
+
+	&::before {
+	  content: "";
+	  position: absolute;
+	  top: -3px;
+	  left: 0;
+	  background: #F37021;
+	  width: 100px;
+	  height: 3px;
+	}
+
+	ul {
+	    list-style: none;
+	    padding-left: 0;
+
+	    li {
+	      position: relative;
+	      margin-top: 15px;
+	      padding-left: 25px;
+
+	      &::before {
+	        content: "";
+	        position: absolute;
+	        top: 3px;
+	        left: 2px;
+	        // background: #AB9C8F;
+	        background: linear-gradient(10deg, #ab9c8f 0%,#ab9c8f 47%,#ffffff 47%,#ffffff 47%,#ffffff 49%,#ffffff 51%,#ffffff 54%,#ffffff 54%,#f37021 54%,#f37021 100%);
+	        width: 8px;
+	        height: 13px;
+	        overflow: hidden;
+	        // border-top: 7px solid #F37021;
+	        // box-sizing: content-box;
+	        // transform: rotate(60deg);
+	      }
+
+	      &:first-child {
+	        margin-top: 0;
+	      }
+	    }
+	}	
+}
+
+.at-glance {
+	margin-top: 0;
+}
+
+.related-articles {
+
+	h3 {
+		font-family: Prata;
+		text-align: center;
+		margin-top: 30px;
+	}
+
+	.uk-panel h4 {
+		font-family: @proxima_light;
+		text-align: center;
+
+		a {
+			color: #444;
+
+			&:focus,
+			&:hover {
+				color: #F36F21;
+			}
+		}
+	}
+
+}

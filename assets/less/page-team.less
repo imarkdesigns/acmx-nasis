@@ -1,0 +1,44 @@
+//
+// Arranged & Compiled by: Mark Rivera, imarkdesigns@gmail.com
+// Github: https://github.com/imarkdesigns
+//
+
+// Internal Libraries
+@import (less) "default/mixins";
+
+#section-team {
+  .uk-article { text-align: center; }
+}
+
+#section-team-list { background: #F9F9F9; /*background: url('@{imgs}paisley.jpg') repeat center / 400px 400px;*/
+  
+  .uk-panel { border-radius: 3px; box-shadow: 0 2px 8px 0 rgba(0,0,0,0.25);
+    &:before { content: ''; position: absolute; top: 50%; left: 50%; display: block; .square(calc(100% - 10px)); border: 1px solid rgba(255,255,255,0.5); z-index: 1; border-radius: 5px; pointer-events: none; transform: translate(-50%,-50%); }
+  }
+
+  .uk-overlay { border-radius: 3px; overflow: hidden;
+    img { border-radius: 3px; }
+    
+    .uk-overlay-background { background: linear-gradient(fade(#000,10%), fade(#000,75%)); width: 100%;
+      .section-copy { position: relative; display: block; color: #FFF; width: calc(100% + 41px); margin: 0 -20px -20px; padding: 25px;
+        h3 { .font(16px,@proxima); text-shadow: 0 1px 3px fade(#000,15%); line-height: 1; max-width: 75%; margin: 0; -webkit-font-smoothing: subpixel-antialiased; }
+         p { .font(14px,@proxima_light); line-height: 1; max-width: 75%; margin: 0; -webkit-font-smoothing: subpixel-antialiased; }
+         a { position: absolute; top: 50%; right: 25px; background-color: @brandcolor; color: #FFF; transform: translate(0,-50%);
+           &:before { position: relative; top: 0; left: 0; font-size: 24px; }
+         }
+      }
+    }
+  }
+
+
+  @media only screen and ( max-width: 1199px ) and ( max-device-width: 1366px ) {
+    .uk-overlay {
+      &.uk-overlay-hover:not(:hover):not(.uk-hover) .uk-overlay-panel:not(.uk-ignore) { opacity: 1; }
+      
+      .uk-overlay-background {
+        .uk-overlay-slide-bottom { opacity: 1; transform: translateY(0); }
+      }
+    }
+  }
+
+}

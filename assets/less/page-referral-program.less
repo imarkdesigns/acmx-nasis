@@ -1,0 +1,507 @@
+//
+// Arranged & Compiled by: Mark Rivera, imarkdesigns@gmail.com
+// Github: https://github.com/imarkdesigns
+//
+
+// Internal Libraries
+@import (less) "default/mixins";
+
+
+.referIntro {
+    padding-top: 75px;
+    padding-bottom: 75px;
+
+    .uk-article p {
+        font-family: @proxima_light;
+    }
+    
+    .uk-article a {
+        color: #8EC23B;
+        border-bottom: 1px dotted #8EC23B;
+    }
+    
+    .uk-article .uk-article-lead {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+}
+
+.referQuote {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 375px;
+        
+    /*
+    &::before {
+        content: "\f10d";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        font-family: FontAwesome;
+        font-size: 42px;
+        opacity: .25;
+        transform: translate(-50%,-50%);
+    }
+
+    &::after {
+        content: "\f10e";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        font-family: FontAwesome;
+        font-size: 42px;
+        opacity: .25;
+        transform: translate(-50%,50%);
+    }
+    */
+    
+    .uk-overlay-background {
+        top: 50%;
+        left: 50%;
+        background: rgba(0,0,0,0.25);
+        width: calc(100% - 20px);
+        height: calc(100% - 20px);
+        transform: translate(-50%,-50%);
+    }
+
+    blockquote {
+        position: relative;
+        padding: 30px 0;
+        border: none;
+        z-index: 10;
+        
+        &::before {
+            content: "\f10d";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            font-family: FontAwesome;
+            font-size: 42px;
+            font-style: normal;
+            color: #FFF;
+            opacity: .50;
+            transform: translate(-50%,0);
+        }
+        
+        + p {
+            position: relative;
+            z-index: 10;
+        }
+        
+        @media ( max-width: 757px ) {
+            margin-top: 30px;
+        }
+    }
+    
+    blockquote p {
+        font-size: 32px;
+        font-style: normal;
+        color: #FFF;
+        line-height: 1.2;
+    }
+    
+    blockquote footer {
+        font-style: normal;
+        color: #FFF;   
+    }
+    
+    p > .uk-button-primary {
+        display: inline-block;
+        background: #8EC23B;
+        line-height: normal;
+        padding: 10px 15px;
+        border-radius: 3px;
+    }
+}
+
+.referForm {
+    padding: 0;
+    
+    .uk-overlay {
+        min-height: 375px;
+        
+        img {
+            width: 100%;
+            min-height: 375px;
+            max-height: 567px;
+            height: 100%;
+            object-fit: cover;
+        }
+    
+        &.referredForm {
+            min-height: 480px;
+            
+            img {
+                min-height: 480px;
+            }
+        }
+    }
+    
+    .uk-panel {
+        max-width: 80%;
+        width: 100%;
+    
+        h2 {
+            font-family: @proxima_light;
+        }
+    
+        button {
+            background: #8EC23B;
+            line-height: normal;
+            border-radius: 3px;
+        }
+    }
+    
+    
+    .wpforms-container-full .wpforms-form {
+    
+        .wpforms-field {
+            margin-bottom: 10px;
+            padding: 0;
+        }
+        
+        .wpforms-one-half {
+            width: 49%;
+            margin-left: 2%;
+        }
+        
+        button[type=submit] {
+            background: #8EC23B;
+            color: #FFF;
+            line-height: normal;
+            border-radius: 3px;
+            border: none;            
+        }
+    
+
+        label.wpforms-error {
+            display: none !important;
+        }
+        
+        input.wpforms-error {
+            background-color: fade(@danger, 25%);
+            color: #FFF;
+        }
+
+    }
+    
+    @media ( max-width: 959px ) {
+        
+        .uk-overlay:first-child {
+            max-height: 375px;            
+        }
+        
+        .wpforms-container-full .wpforms-form {
+
+            .wpforms-field:last-child {
+                margin-bottom: 0;
+            }
+            
+        }
+        
+    }
+    
+    @media ( max-width: 757px ) {
+
+        .wpforms-container-full .wpforms-form {
+
+            .wpforms-one-half {
+                display: block;
+                width: 100%;
+                margin-left: 0;
+                margin-bottom: 10px;
+                
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+        }
+        
+    }
+    
+}
+
+.americanRedCrossFeed {
+
+    h1 {
+        font-family: @proxima_bold;
+        text-align: center;
+    }
+
+    .rss-aggregator {
+        column-count: 2;
+        column-gap: 30px;
+        list-style: none;
+        padding-left: 0;
+    
+        li {
+            position: relative;
+            margin-bottom: 0;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 20px;
+            
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+            break-inside: avoid;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 12px;
+                left: 5px;
+                display: block;
+                background: #90c43d;
+                width: 3px;
+                height: 3px;
+                border-radius: 25px;
+            }
+            
+            &::after {
+                content: '';
+                position: absolute;
+                top: 7px;
+                left: 0;
+                display: block;
+                width: 13px;
+                height: 13px;
+                border-radius: 25px;
+                border: 1px solid #90c43d;
+            }
+        }
+        
+        a {
+            color: #444;
+            
+            &:focus,
+            &:hover {
+                color: #8EC23B;    
+            }
+        }
+        
+        .wprss-feed-meta * {
+            font-family: @proxima_light;
+            color: #999;
+        }
+    
+    }
+    
+    @media ( max-width: 767px ) {
+        
+        .rss-aggregator {
+            column-count: 1;
+            column-gap: 0;
+        }
+        
+    }
+
+}
+
+
+// ## CUSTOM ROUTER
+.teamDetails {
+
+    background: #F6F6ED;
+    min-height: 375px;
+    border: 10px solid #FFF;
+    
+    .uk-container-small {
+        
+        text-align: center;
+        margin-bottom: 30px;
+        
+        h1, h2, h3, p {
+            font-family: @proxima_light;
+        }
+        
+    }
+
+
+    .uk-panel h4 {
+        font-family: @proxima_bold;
+        
+        small {
+            display: block;
+            font-family: @proxima_light;
+            color: #888;
+        }
+    }
+    
+    .uk-panel p {
+        font-family: @proxima_light;
+        font-size: 14px;
+        text-align: justify;
+    }
+
+}
+
+
+// ## MODAL FORM
+#referForm {
+
+    h2 {
+        font-family: @proxima_light;
+    }
+    
+    h3 {
+        font-family: @proxima_light;
+        font-size: 18px;
+        margin: 15px 0 10px;
+    }
+
+    .wpforms-container-full .wpforms-form {
+    
+        .wpforms-field {
+            margin-bottom: 10px;
+            padding: 0;
+        }
+        
+        .wpforms-one-half {
+            width: 49%;
+            margin-left: 2%;
+        }
+        
+        .wpforms-one-third {
+            width: calc( (100% / 3) - 1% );
+            margin-left: 1.5%;
+        }
+        
+        .wpforms-field-checkbox {
+            font-family: @proxima_light;
+            font-size: 14px;
+        }
+        
+        button[type=submit] {
+            background: #8EC23B;
+            color: #FFF;
+            line-height: normal;
+            border-radius: 3px;
+            border: none;            
+        }
+    
+
+        label.wpforms-error {
+            display: none !important;
+        }
+        
+        input.wpforms-error {
+            background-color: fade(@danger, 25%);
+            color: #FFF;
+        }
+
+    }
+    
+    @media ( max-width: 959px ) {
+        
+        .uk-overlay:first-child {
+            max-height: 375px;            
+        }
+        
+        .wpforms-container-full .wpforms-form {
+
+            .wpforms-field:last-child {
+                margin-bottom: 0;
+            }
+            
+        }
+        
+    }
+    
+    @media ( max-width: 757px ) {
+
+        .wpforms-container-full .wpforms-form {
+
+            .wpforms-one-half,
+            .wpforms-one-third {
+                display: block;
+                width: 100%;
+                margin-left: 0;
+                margin-bottom: 10px;
+                
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            
+            [data-field-id="7"],
+            [data-field-id="19"],
+            [data-field-id="22"] {
+                margin-bottom: 30px;
+            }
+
+        }
+        
+    }
+
+}
+
+
+// ## RESPONSE MESSAGE
+#referResponseClient,
+#referResponseFriend {
+
+    .uk-close-alt {
+        z-index: 100;
+    }
+    
+    .uk-panel-teaser {
+        margin: 0;
+    }
+    
+    .uk-article {
+        padding: 30px;
+    }
+
+    .uk-article > p {
+        font-family: @proxima_light;
+        font-size: 24px;
+        line-height: 1.2;
+        margin: 0;
+    }
+    
+    .uk-modal-footer {
+        text-align: center;
+        margin-top: 0;
+        padding: 15px;
+        border-top: 1px solid #DDD;
+        
+        button {
+            background: #8EC23B;
+            color: #FFF;
+            line-height: normal;
+            border-radius: 3px;
+            border: none;            
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,105 @@
+//
+// Arranged & Compiled by: Mark Rivera, imarkdesigns@gmail.com
+// Github: https://github.com/imarkdesigns
+//
+
+// Internal Libraries
+@import (less) "default/mixins";
+
+* {
+  &, &:before, &:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+@inherit : -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
+.acf-field {
+  
+  .acf-label {
+    label { font: 400 14px @inherit; }
+  }
+  
+  
+  // Label Description  
+  p.description { font: 400 11px @inherit; color: #888;
+    b { font-weight: 400; color: #0073AA; }
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="url"] { font: 300 14px sans-serif; height: 35px; padding: 6px 12px; box-shadow: none; }
+  input[type="url"] { padding-left: 25px; }
+  
+  textarea { font: 300 14px sans-serif; padding: 12px; box-shadow: none; }
+
+}
+
+.acf-icon {
+
+  &.-small { line-height: 16px; }
+
+}
+
+.acf-url {
+
+  i { top: 9px; }
+
+}
+
+// Textfield Prepend & Append Styling
+.acf-input-prepend,
+.acf-input-append { line-height: 27px; height: 35px; }
+
+// Admin Column Modifier
+.col-1-4 {
+  
+}
+
+.col-1-2 {
+
+  &.texteditor {
+    
+    &.__slide-content {
+      .wp-editor-container { height: 400px; }
+      .mce-edit-area { height: 310px; }      
+    }
+  
+  }
+  
+  &.textfield {
+    
+    &.__blurb-content {
+      textarea { height: 84px; }      
+    }
+
+  }
+  
+  &.photo {
+    
+    &.__img-content {
+      img { height: 389px; object-fit: cover; }
+    }
+    
+  }
+
+}
+
+.col-3-4 {
+  
+}
+
+.col-1-1 {
+
+  &.photo {
+    
+    &.__img-content {
+      img { height: 359px; object-fit: cover; }
+    }
+    
+  }
+
+}
+

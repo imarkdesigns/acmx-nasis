@@ -1,0 +1,81 @@
+//
+// Arranged & Compiled by: Mark Rivera, imarkdesigns@gmail.com
+// Github: https://github.com/imarkdesigns
+//
+
+// Trail Path for Image
+@imgs         : "../images/";
+
+// Brand Colors
+@primary      : #00A8E6;
+@danger       : #DA314B;
+@warning      : #FAA732;
+@success      : #8CC14C;
+@info         : #91A8AE;
+
+// Link Colors
+@base         : #444444;
+@mute         : #999999;
+@link         : #0077dd;
+@hover        : #005599;
+
+// Custom Brand Colors
+@brandcolor   : #90C43D;
+@maincolor    : #F36F21;
+@altcolor     : #AC9C8F;
+
+
+// Default FontFamily
+// @family       : proxima_nova_normal, sans-serif;
+@proxima: proxima_nova_normal, sans-serif;
+@proxima_bold: proxima_nova_bold, sans-serif;
+@proxima_light: proxima_nova_light, sans-serif;
+@prata: "Prata", Times, serif;
+
+// Custom Mixins
+.container( @max, @margin, @padding ) {
+  max-width: @max;
+  margin: @margin;
+  padding-left: @pad;
+  padding-right: @pad;
+}
+
+.font( @size:16px, @family:@proxima ) {
+  font-size: @size;
+  font-family: @family;
+}
+
+.clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.size( @width, @height ) {
+  width: @width;
+  height: @height;
+}
+
+.square( @size ) {
+  .size( @size, @size );
+}
+
+.center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.placeholder( @color:#888 ) {
+  &::-moz-placeholder {
+    color: @color;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder { color: @color; }
+  &::-webkit-input-placeholder  { color: @color; }
+}

@@ -1,0 +1,318 @@
+//
+// Arranged & Compiled by: Mark Rivera, imarkdesigns@gmail.com
+// Github: https://github.com/imarkdesigns
+//
+
+* { &, &:before, &:after { box-sizing: border-box; } }
+
+html { font: 16px/20px @proxima, sans-serif; color: #444; -webkit-font-smoothing: subpixel-antialiased;
+  body { min-width: 320px; }
+  
+  a { transition: 300ms ease-out;
+    &, &:focus, &:hover { text-decoration: none; outline: none; -webkit-tap-highlight-color: rgba(0,0,0,0); }
+  }
+
+  .btn, .uk-button,
+  button:focus, input { outline: none; -webkit-tap-highlight-color: rgba(0,0,0,0); }
+
+  figure,
+  figcaption { margin-bottom: 0; }
+
+  strong { font-family: @proxima_bold; font-weight: normal; }
+
+  em, i { font-family: @proxima_light; font-style: italic; color: inherit !important; }
+
+  ::selection { background-color: #333; color: #FFF; text-shadow: 1px 0 1px fade(#000,.75); }
+  ::-moz-selection { background-color: #333; color: #FFF; text-shadow: 1px 0 1px fade(#000,.75); }
+}
+
+// UIKit 2.27.4 Overrides
+.uk-container { margin-left: auto; margin-right: auto; }
+.uk-container-expand { max-width: none; }
+.uk-container-large { max-width: 1440px; }
+.uk-container-small { max-width: 980px; }
+
+.uk-offcanvas { opacity: 0; transition: all 300ms ease-out;
+  &.uk-active { opacity: 1; }
+}
+
+.uk-button {
+  &.uk-button-link { font-size: inherit; padding-left: 0; padding-right: 0; }
+}
+
+.uk-navbar { border: 0; }
+
+.uk-width-small { max-width: 150px; }
+.uk-width-medium { max-width: 300px; }
+.uk-width-large { max-width: 450px; }
+.uk-width-xlarge { max-width: 600px; }
+.uk-width-xxlarge { max-width: 750px; }
+
+.uk-divider-icon { position: relative; height: 20px; background-repeat: no-repeat; background-position: 50% 50%; margin-top: 50px; margin-bottom: 50px;  border-top: 0; }
+.uk-divider-icon { background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Ccircle%20fill%3D%22none%22%20stroke%3D%22%23e5e5e5%22%20stroke-width%3D%222%22%20cx%3D%2210%22%20cy%3D%2210%22%20r%3D%227%22%3E%3C%2Fcircle%3E%0A%3C%2Fsvg%3E%0A"); }
+.uk-divider-icon::before,
+.uk-divider-icon::after { content: ""; position: absolute; top: 50%; max-width: calc(50% - (50px / 2)); border-bottom: 1px solid #e5e5e5; }
+.uk-divider-icon::before { right: calc(50% + (50px / 2)); width: 100%; }
+.uk-divider-icon::after { left: calc(50% + (50px / 2)); width: 100%; }
+
+.uk-heading-line { overflow: hidden; }
+.uk-heading-line > * { display: inline-block; position: relative; }
+.uk-heading-line > :before, .uk-heading-line > :after { content: ""; position: absolute; top: calc(50% - (1px / 2)); width: 2000px; border-bottom: 1px solid #e5e5e5; }
+.uk-heading-line > :before { right: 100%; margin-right: .6em; }
+.uk-heading-line > :after { left: 100%; margin-left: .6em; }
+
+.uk-button-outline { background-color: transparent; color: #FFF; border: 1px solid #E5E5E5 !important;
+  &:hover { background-color: transparent; color: #CCC; }
+}
+
+// Modal
+[id^="isLoggedIn"] .uk-modal-dialog { padding: 0;
+  > .uk-close:first-child { color: #FFF; margin: 10px 10px 0 0; opacity: .75; }
+  
+  .uk-modal-header { background: @maincolor; .font(18px,@proxima_bold); color: #FFF; padding: 25px; }
+  .uk-modal-body { .font(16px,@proxima); padding: 25px;
+    p { margin-bottom: 0; }
+    a[href*="ondemand"] { color: @maincolor; }
+  }
+  .uk-modal-footer { background: @altcolor; color: #FFF; padding: 15px 25px;
+    &.uk-text-small { .font(14px,@proxima); -webkit-font-smoothing: subpixel-antialiased; }
+    
+    .uk-button { background: linear-gradient(@maincolor, darken(@maincolor,10%)); font-family: @proxima_bold; color: #FFF; text-transform: uppercase; line-height: 1.2; padding-top: 5px; padding-bottom: 5px; border-radius: 3px; }
+  }
+}
+
+[id^="investmentHighlight"] .uk-modal-dialog { background: @maincolor; padding: 0;
+  [class^="doifdHorizontal"] {
+    [class^="doifdTitle"] { .font(24px,@proxima_bold); color: #FFF; text-align: center; }
+    [class^="doifdDesc"] { color: #FFF; text-align: center; }
+  }
+  
+  #doifd_waiting { margin: 15px auto 0; padding-bottom: 15px;
+    img { height: 15px; min-height: 1%; }
+  }
+  
+  #doifd_form { display: flex; justify-content: space-between; background: #333; margin: 0 -25px; padding: 25px;
+    
+    input[type="text"],
+    input[type="submit"] { width: calc(33.3333% - 5px); }
+    
+    input[type="text"] { font-size: 13px; min-height: 34px; height: auto; padding: 6px 12px; border: 0; border-radius: 2px; -webkit-appearance: none;
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        font-size: 13px;
+      }
+      &::-moz-placeholder { /* Firefox 19+ */
+        font-size: 13px;
+      }
+      &:-ms-input-placeholder { /* IE 10+ */
+        font-size: 13px;
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+        font-size: 13px;
+      }      
+    }
+    input[type="submit"] { display: inline-block; background: @maincolor; .font(13px,@proxima_bold); color: #FFF; height: 34px; margin-top: 2px; border: 0; border-radius: 2px; -webkit-appearance: none; }
+    
+  }
+  
+  #doifd_statusmsg { display: none; background: #333; width: auto; margin: 25px -25px 0; padding: 25px;
+    .doifd_success_msg { font-weight: 400; color: #FFF;
+      h4 { font-size: 18px; color: #FFF; line-height: 1.2; margin-bottom: 15px; }
+       p { margin: 0; }
+       i { .font(14px,@proxima_light); font-weight: 400; font-style: normal; color: #CCC; }  
+    }
+    
+    .doifd_error_msg { font-weight: 400; color: @altcolor; }
+  }
+}
+
+
+[id^="personalContact"] .uk-modal-dialog { padding: 0;
+  > .uk-close:first-child { color: #FFF; margin: 10px 10px 0 0; opacity: .75; }
+
+  .uk-modal-header { background: @maincolor; .font(18px,@proxima_bold); color: #FFF; padding: 25px; }
+  .uk-modal-body { .font(16px,@proxima); padding: 0 25px 25px;
+    .wpforms-field { margin-top: 10px; padding: 0;
+      &:first-child { margin-top: 0; }
+    }
+
+    .wpforms-field-label { font-size: 14px; font-weight: 400; }
+    .wpforms-captcha-equation { font-size: 14px; }
+    input[type="text"],
+    input[type="email"] { height: 34px; }
+    
+    .wpforms-submit-container { margin-top: 30px; padding: 0;
+      .wpforms-submit { background: linear-gradient(@maincolor, darken(@maincolor,10%)); .font(14px,@proxima); color: #FFF; padding: 5px 15px; border: 0; }
+    }
+  }
+  
+}
+
+article.type-post {
+  
+  figure {
+    display: inline-block !important;
+    margin: 30px !important;
+  
+    &.alignright {
+      float: right;
+      max-width: 350px;
+    }
+    
+    &.alignleft {
+      float: left;
+      max-width: 350px;
+    }
+  
+    img {
+      margin-bottom: 15px;
+      padding: 5px;
+      border-radius: 4px;
+      box-shadow: 0 0 0 1px #DDD;
+    }
+    
+    figcaption {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.4;
+    }
+  }
+
+}
+
+// Overrides to MailChimp + Bloom
+/*
+.button~a:not(.button), .link-underline a:not(.button), p>a {
+  border-bottom: 0 !important;
+  color: inherit !important;
+}
+*/
+
+// Hubspot floating iFrame
+[owner="archetype"] {
+  display: none !important;
+}
+
+// Global Modal Rule
+#global-investment-modal {
+
+  .uk-modal-close {
+    position: absolute;
+    bottom: -45px;
+    left: calc( 50% - ( 88px / 2 ) );
+    display: inline;
+    color: #444;
+    text-align: center;
+
+    span {
+      display: inline-block;
+      background: rgba(#FFF, .80);
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 5px;
+      transition: 300ms ease-out;
+    }
+
+    &:hover span,
+    &:focus span {
+      background: rgba(#FFF, 1);
+    }
+
+  }
+
+  .uk-modal-dialog {
+    padding: 0;
+    box-shadow: 0 0 15px 0 rgba(#000, .45);
+  }
+
+  .uk-modal-header,
+  .uk-modal-footer {
+    position: relative;
+    background: #F37021;
+    color: #FFF;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(#000, .25);
+    margin: 0;
+    padding: 15px;
+  }
+
+  .uk-modal-header {
+    font-family: @proxima_bold;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .uk-modal-footer > a {
+    color: #FFF;
+  }
+
+  .uk-overlay {
+    min-height: 350px;
+
+    > img {
+      height: 350px;
+      object-fit: cover;
+    }
+  }
+
+  .uk-overlay-panel {
+    flex-direction: column;
+
+    img {
+      width: 100%;
+      max-width: 200px;
+    }
+
+    ul {
+      list-style: none;
+      font-family: @prata;
+      font-size: 24px;
+      line-height: 1.4;
+      padding: 0;
+    }
+  
+    &.uk-overlay-background {
+      background: rgba(#000, .65);
+    }
+  }
+
+}
+
+.alignright {float:right; margin:0 0 1em 1em}
+.alignleft {float:left; margin:0 1em 1em 0}
+.aligncenter {display: block; margin-left: auto; margin-right: auto}
+// a .alignright {float:right; margin:0 0 1em 1em}
+// a .alignleft {float:left; margin:0 1em 1em 0}
+// a .aligncenter {display: block; margin-left: auto; margin-right: auto}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
