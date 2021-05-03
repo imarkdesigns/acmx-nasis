@@ -30,7 +30,7 @@ if ( ! post_password_required() ) : ?>
         <div class="uk-width-medium-2-3">
           <?php while ( have_posts() ) : the_post(); ?>
           <article <?php post_class('uk-article grid-post'); ?> >
-            <a href="<?php the_permalink(); ?>" title="<?php echo get_the_title(); ?>"><h1 class="uk-article-title"><?php the_title(); ?></h1></a>
+            <a href="<?php the_permalink(); ?>"><h1 class="uk-article-title"><?php the_title(); ?></h1></a>
             <p class="uk-article-lead"><?php the_field( 'lead_paragraph' ); ?></p>
             <figure class="uk-clearfix">
               <?php $featured = get_post_thumbnail_id();
@@ -59,7 +59,9 @@ if ( ! post_password_required() ) : ?>
         <div class="uk-width-medium-1-3">
 
           <div class="exchange-recent">
+
              <?php (!function_exists('dynamic_sidebar')) || !dynamic_sidebar('article_recent') ? null : null ; ?>
+
           </div>
 
           <div class="exchange-categories">

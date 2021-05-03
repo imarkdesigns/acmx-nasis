@@ -2021,20 +2021,20 @@
 		"oAP": "/modules/slugs/page-1031-exchange-articles.php",
 		"oF": 0
 		},
+	"/modules/slugs/page-1031-exchange-calculator.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/modules/slugs/page-1031-exchange-calculator.php",
+		"oF": 0
+		},
 	"/modules/slugs/page-1031-exchange-information.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 2,
 		"oAP": "/modules/slugs/page-1031-exchange-information.php",
-		"oF": 0
-		},
-	"/modules/slugs/page-45-180-day-exchange-calculator.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/modules/slugs/page-45-180-day-exchange-calculator.php",
 		"oF": 0
 		},
 	"/modules/slugs/page-about.php": {

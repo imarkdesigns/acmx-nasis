@@ -297,6 +297,40 @@
 
 }
 
+.recent-posts-plus {
+
+    dl {
+        dt {
+            font-family: @proxima;
+            font-weight: 400;
+          position: relative;
+          margin-top: 15px;
+          padding-left: 25px;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 3px;
+            left: 2px;
+            // background: #AB9C8F;
+            background: linear-gradient(10deg, #ab9c8f 0%,#ab9c8f 47%,#ffffff 47%,#ffffff 47%,#ffffff 49%,#ffffff 51%,#ffffff 54%,#ffffff 54%,#f37021 54%,#f37021 100%);
+            width: 8px;
+            height: 13px;
+            overflow: hidden;
+            // border-top: 7px solid #F37021;
+            // box-sizing: content-box;
+            // transform: rotate(60deg);
+          }
+
+        }
+
+        dd {
+            display: none;
+        }
+    }
+
+}
+
 .featured-property-panel {
     margin-bottom: 30px;
   }
