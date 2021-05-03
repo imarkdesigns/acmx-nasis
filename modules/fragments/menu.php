@@ -112,12 +112,12 @@ if ( $post->post_type != 'nasis_investments' || get_field('property_status') == 
                     <a href="#">About NASIS <i class="uk-icon-caret-down"></i></a>
                     <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-bottom">
                         <ul class="uk-nav uk-nav-dropdown">
-                            <li><a href="<?php echo site_url('/commercial-real-estate-investments'); ?>">NAS Investment Solutions</a></li>
-                            <li><a href="<?php echo site_url('/team'); ?>">Team</a></li>
-                            <li><a href="<?php echo site_url('/news'); ?>">News</a></li>
-                            <li><a href="<?php echo __(site_url('/testimonials#client-quotes')); ?>"> Testimonials </a></li>
+                            <li><a href="<?php echo site_url('commercial-real-estate-investments'); ?>">NAS Investment Solutions</a></li>
+                            <li><a href="<?php echo site_url('team'); ?>">Team</a></li>
+                            <li><a href="<?php echo site_url('news'); ?>">News</a></li>
+                            <li><a href="<?php echo __(site_url('testimonials#client-quotes')); ?>"> Testimonials </a></li>
                             <li><a href="#NASISRecords" data-uk-smooth-scroll="{offset: 80}">NAS Property Track Record</a></li>
-                            <li><a href="<?php echo esc_url( site_url('/wp-content/uploads/2021/02/NASIS-Brochure-2021-February-Edition.pdf') ); ?>">Download NASIS Brochure</a></li>
+                            <li><a href="<?php echo esc_url( site_url('wp-content/uploads/2021/02/NASIS-Brochure-2021-February-Edition.pdf') ); ?>">Download NASIS Brochure</a></li>
                         </ul>
                     </div>
                 </li>
@@ -125,15 +125,15 @@ if ( $post->post_type != 'nasis_investments' || get_field('property_status') == 
                     <a href="#">Investment Info <i class="uk-icon-caret-down"></i></a>
                     <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-bottom">
                         <ul class="uk-nav uk-nav-dropdown">
-	                        <li><a href="<?php echo esc_url( site_url('/1031-exchange-information/fractional-investing') ); ?>">Fractional Interest Investing</a></li>
-	                        <li><a href="<?php echo esc_url( site_url('/webinar') ); ?>">Webinars</a></li>
-							<li><a href="<?php echo esc_url( site_url('/1031-exchange-information/1031-exchange-articles') ); ?>">Real Estate Investment Articles</a></li>
-                            <li><a href="<?php echo esc_url( site_url('/1031-exchange-information') ); ?>">1031 Exchange Information</a></li>
-                            	<li><a href="<?php echo esc_url( site_url('/1031-exchange-information#EIG') ); ?>">1031 Exchange Information Guide Download</a></li>
-                            <li><a href="<?php echo esc_url( site_url('/1031-exchange-information#TaxRates') ); ?>">Tax Rate By State</a></li>
-                            <li><a href="<?php echo esc_url( site_url('/1031-exchange-information/45-180-day-exchange-calculator') ); ?>">45/180 Day Exchange Calculator</a></li>
-                            <li><a href="<?php echo esc_url( site_url('/1031-exchange-information/faqs') ); ?>">Frequently Asked Questions</a></li>
-                            <li><a href="<?php echo esc_url( site_url('/1031-exchange-information/glossary') ); ?>">Glossary of Terms</a></li>
+	                        <li><a href="<?php echo esc_url( site_url('fractional-investing') ); ?>">Fractional Interest Investing</a></li>
+	                        <li><a href="<?php echo esc_url( site_url('webinar') ); ?>">Webinars</a></li>
+							<li><a href="<?php echo esc_url( site_url('1031-exchange-information/1031-exchange-articles') ); ?>">Real Estate Investment Articles</a></li>
+                            <li><a href="<?php echo esc_url( site_url('1031-exchange-information') ); ?>">1031 Exchange Information</a></li>
+                            <li><a href="<?php echo esc_url( site_url('1031-exchange-information?q=guide#NASISEIG') ); ?>">1031 Exchange Information Guide Download</a></li>
+                            <li><a href="<?php echo esc_url( site_url('1031-exchange-information#TaxRates') ); ?>">Tax Rate By State</a></li>
+                            <li><a href="<?php echo esc_url( site_url('1031-exchange-information/1031-exchange-calculator') ); ?>">1031 Exchange Calculator</a></li>
+                            <li><a href="<?php echo esc_url( site_url('1031-exchange-information/faqs') ); ?>">Frequently Asked Questions</a></li>
+                            <li><a href="<?php echo esc_url( site_url('1031-exchange-information/glossary') ); ?>">Glossary of Terms</a></li>
                         </ul>
                     </div>
                 </li>
