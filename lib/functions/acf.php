@@ -25,17 +25,10 @@ if( function_exists('acf_add_options_page') ) {
 
 ## ACF API
 function my_acf_google_map_api( $api ){
-    $api['key'] = 'AIzaSyAvkz_1vSXzaGB03fPw50jSpNQzjCOhTTc';
+    $api['key'] = $_ENV['ACF_GOOGLEMAP'];
     return $api;
 }
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
-
-/*
-function ACF_GoogleAPIkey() {
-  acf_update_setting( 'google_api_key', 'AIzaSyAvkz_1vSXzaGB03fPw50jSpNQzjCOhTTc' );
-}
-add_action( 'acf/init', 'ACF_GoogleAPIkey' );
-*/
 
 ## ACF Style Overrides
 function acf_styles() {
