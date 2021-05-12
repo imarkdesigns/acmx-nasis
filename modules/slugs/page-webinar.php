@@ -226,7 +226,7 @@ $firstname = explode(" ", $firstname); ?>
 			<img src="<?php echo _uri.'/assets/images/img-bg-webinar.jpg'; ?>" alt="NASIS Webinar Cover">
             <figcaption class="uk-overlay-panel uk-overlay-background uk-flex uk-flex-center uk-flex-middle uk-text-center">
               <div>
-                  <img src="<?php echo _uri.'/assets/images/youtube-play.svg'; ?>" width="64" height="64" alt="">
+                  <img src="<?php echo _uri.'/assets/images/youtube-play.svg'; ?>" width="64" height="64" alt="YT Play Button">
                   <h4><small>Watch our Previous Webinar</small></h4>
               </div>
             </figcaption>

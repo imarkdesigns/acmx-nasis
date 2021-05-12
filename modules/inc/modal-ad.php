@@ -15,7 +15,7 @@
                     </div>
                     <div class="uk-width-auto">
                         <figure>
-                            <img src="<?php echo _uri . '/assets/images/1031-exchange-guide-cover-small.jpg'; ?>" alt="">
+                            <img src="<?php echo _uri . '/assets/images/1031-exchange-guide-cover-small.jpg'; ?>" alt="Download Free 28-Page Booklet - 1031: A Guide Through the Tax Deferred Real Estate Investment Process.">
                         </figure>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                     </div>
                     <div class="uk-width-auto">
                         <figure>
-                            <img src="<?php echo _uri . '/assets/images/booklet-cover-small.jpg'; ?>" alt="">
+                            <img src="<?php echo _uri . '/assets/images/booklet-cover-small.jpg'; ?>" alt="Free 36-Page Booklet Real Estate Investing with the Lessons of 2020: A Collection of 10 timely Articles.">
                         </figure>
                     </div>
                 </div>

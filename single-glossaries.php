@@ -69,10 +69,10 @@ if ( $_COOKIE['backLink'] == 'true' ) { ?>
       <hr class="uk-divider-icon">
 
       <aside class="uk-overlay uk-margin-top uk-border-rounded">
-        <img src="<?php echo _uri.'/assets/images/1031-exchange-download.jpg'; ?>" alt="">
+        <img src="<?php echo _uri.'/assets/images/1031-exchange-download.jpg'; ?>" alt="Download Free - 1031: A Guide Through the Tax Deferred Real Estate Investment Process.">
         <figcaption class="uk-overlay-panel uk-overlay-background uk-flex uk-flex-right uk-flex-middle">
           <article>
-            <img src="<?php echo _uri.'/assets/images/book-cover-1031EIG.jpg'; ?>" alt="">
+            <img src="<?php echo _uri.'/assets/images/book-cover-1031EIG.jpg'; ?>" alt="Download Free - 1031: A Guide Through the Tax Deferred Real Estate Investment Process.">
             <h3>Download Free - 1031: A Guide Through the Tax Deferred Real Estate Investment Process.</h3>
             <a href="<?php echo __(site_url('1031-exchange-information?q=guide#NASISEIG')); ?>" class="uk-button">Download Free Guide Here</a>
           </article>

@@ -479,7 +479,7 @@ $_GET['rkp'] = get_field('contact_name');
         <button type="button" class="uk-modal-close uk-close"></button>
         <div class="uk-modal-body">
             <figure class="uk-inline uk-text-center">
-                <img src="<?php echo _uri; ?>/assets/images/profile-ke-kennedy.jpg" class="uk-border-circle" alt="">
+                <img src="<?php echo _uri; ?>/assets/images/profile-ke-kennedy.jpg" class="uk-border-circle" alt="Karen E. Kennedy, President & Founder">
                 <figcaption>
                     <h3><?php the_field('contact_name'); ?></h3>
                     <p><?php the_field('contact_position'); ?></p>

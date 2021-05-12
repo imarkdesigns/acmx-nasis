@@ -10,7 +10,7 @@
             <img src="<?php echo _uri.'/assets/images/img-bg-webinar.jpg'; ?>" alt="NASIS Webinar">
             */ ?>
             <figcaption class="uk-overlay-panel uk-overlay-background uk-flex uk-flex-center uk-flex-middle uk-text-center">
-                <img src="https://www.nasinvestmentsolutions.com/wp-content/themes/nasis/assets/images/nasis-logo.svg" alt="NASIS">
+                <img src="<?php echo _uri.'/assets/images/nasis-logo.svg'; ?>" alt="NAS Investment Solutions">
                 <p class="uk-text-large uk-margin-top">
                     6.35% Cash-On-Cash on 10-Year Hold <br>
                     Long Term Absolute NNN Lease <br>

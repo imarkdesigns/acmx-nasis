@@ -13,9 +13,11 @@
   <section id="section-about" class="uk-block">
     <div class="uk-container uk-container-small">
 
+      <?php if ( $featured_photo ) : ?>
       <figure class="uk-border-circle">
         <img src="<?php echo $featured_photo['url']; ?>" alt="<?php echo (!empty($featured_photo['alt'])) ? $featured_photo['alt'] : $featured_photo['title']; ?>">
       </figure>
+      <?php endif; ?>
 
       <?php $lead_paragraph = get_field('lead_paragraph'); ?>
       <article class="uk-article">
