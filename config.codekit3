@@ -1981,6 +1981,14 @@
 		"oAP": "/modules/inc/ics.php",
 		"oF": 0
 		},
+	"/modules/inc/local-nav.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/modules/inc/local-nav.php",
+		"oF": 0
+		},
 	"/modules/inc/mailchimp-api.php": {
 		"cB": 0,
 		"ft": 8192,

@@ -48,16 +48,6 @@ if ( $post->ID == '1279' || $post->ID == '1282' || $post->ID == '2289' ) { ?>
 
 } ?>
 
-<?php if ( $_COOKIE['backLink'] == 'true' ) { ?>
-<div class="uk-navbar _backlinks">
-    <div class="uk-container uk-container-large">
-        <div class="uk-navbar-flip">
-            <i class="uk-icon-long-arrow-left"></i> <a href="https://www.nasassets.com/" class="backLink"> Back to NASASSETS.Com </a>
-        </div>
-    </div>
-</div>
-<?php } ?>
-
 <header class="hero-page <?php echo $class; ?>">
   <?php get_template_part( _menu ); ?>
   <div class="section-page-wrapper" data-post="<?php echo $post->post_name; ?>">
@@ -86,4 +76,10 @@ if ( $post->ID == '1279' || $post->ID == '1282' || $post->ID == '2289' ) { ?>
     </figure>
 
   </div>
+
+    <div class="hero-breadcrumbs">
+        <div class="uk-container uk-container-expand">
+            <?php echo do_shortcode( '[wpseo_breadcrumb]' ); ?>
+        </div>
+    </div>
 </header>

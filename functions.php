@@ -55,6 +55,7 @@ define( '_base_footer', 'lib/base/footer' );
 
 # Modal Ad
 define( '_mdlADS', 'modules/inc/' );
+define( '_inc',    'modules/inc/' );
 
 # Assets Path Patterns
 define( '_styles',      _uri.'/assets/styles/' );

@@ -7,22 +7,9 @@
 $firstname = $_GET['recipient'];
 $firstname = explode(" ", $firstname);
 
+// Include Local Navigation for 1031 Exchange Information
+include( locate_template( _inc.'local-nav.php', false, true ) );
 ?>
-
-<nav class="uk-navbar local-nav uk-visible-large">
-  <div class="uk-container">
-    <div class="uk-navbar-flip">
-      <ul class="uk-navbar-nav">
-        <li><a href="<?php echo __(site_url('webinar')); ?>">Webinars</a></li>
-        <li><a href="#TaxRates" data-uk-smooth-scroll="{offset: 70}">Tax Rates by State</a></li>
-        <li><a href="<?php echo __(site_url('1031-exchange-information/1031-exchange-articles')); ?>">Real Estate investment Articles</a></li>
-        <li><a href="<?php echo __(site_url('1031-exchange-information/faqs')); ?>">FAQ’s</a></li>
-        <li><a href="<?php echo __(site_url('1031-exchange-information?q=guide#NASISEIG')); ?>" data-uk-smooth-scroll="{offset: 70}">Download 1031 Guide</a></li>
-        <li><a href="<?php echo __(site_url('1031-exchange-information/glossary')); ?>">Glossary</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
 
 <main class="main" role="main">
 
@@ -233,7 +220,7 @@ $firstname = explode(" ", $firstname);
           <h3><?php echo $tr_heading; ?></h3>
 
           <select id="dynamic-states" name="states" class="uk-select">
-            <option value="">Search Your State's Rate</option>
+            <option value="">Search Your 2021 State's Rate</option>
 
             <?php $rowCount = 0;
             $rows = get_field('tax_table_list');
@@ -284,7 +271,7 @@ $firstname = explode(" ", $firstname);
                     <text class="value" x="50%" y="57.5%" fill="#92C800">0%</text>
                   </svg>
                 </div>
-                <h4>State Rate <small>2019</small></h4>
+                <h4>State Rate <small>2021</small></h4>
             </div>
             <div>
                 <div class="svg-wrapper">
@@ -295,7 +282,7 @@ $firstname = explode(" ", $firstname);
                     <text class="value" x="50%" y="57.5%" fill="#F37021">0%</text>
                   </svg>
                 </div>
-                <h4>Combined Rate <small>2019</small></h4>
+                <h4>Combined Rate <small>2021</small></h4>
             </div>
           </div>
         </div>
@@ -313,12 +300,12 @@ $firstname = explode(" ", $firstname);
 
         <?php
 	        $tab = $_GET['tab'];
-			$switch = $_GET['q'];
+			    $switch = $_GET['q'];
 	    ?>
 
         <ul class="uk-tab" data-uk-tab="{connect:'#my-id', animation: 'uk-animation-fade'}">
-            <li class="<?php echo ( $tab == 'guide' && $switch == 'guide' ) ? 'uk-active' : ''; ?>"><a href="">Download Our Free 1031 Exchange Guides</a></li>
-            <li class="<?php echo ( $tab == 'bookletform' && $switch == 'booklet' ) ? 'uk-active' : ''; ?>"><a href="">Download FREE Investment White Papers</a></li>
+            <li class="<?php echo ( $tab == 'guide' || $switch == 'guide' ) ? 'uk-active' : ''; ?>"><a href="#">Download Our Free 1031 Exchange Guides</a></li>
+            <li class="<?php echo ( $tab == 'bookletform' || $switch == 'booklet' ) ? 'uk-active' : ''; ?>"><a href="#">Download FREE Investment White Papers</a></li>
         </ul>
 
         <ul id="my-id" class="uk-switcher">
