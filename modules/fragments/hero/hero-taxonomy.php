@@ -31,14 +31,17 @@ if ( $taxonomyName == 'topic_category' ) :
 
       <figure class="uk-overlay">
       <?php echo wp_get_attachment_image( $hero_bg['id'], 'full' ); ?>
-        <figcaption class="uk-overlay-panel uk-overlay-background uk-flex uk-flex-bottom">
+        <figcaption class="uk-overlay-panel uk-overlay-background uk-flex uk-flex-bottom" id="<?php echo $post->ID; ?>">
           <div class="uk-container uk-container-small">
-            <h1 class="uk-heading-large"><?php the_title(); ?></h1>
+            <h1 class="uk-heading-large"><?php 
+		        the_title(); 
+				echo ': Topic - '; single_term_title(); 
+			?></h1>
           </div>
         </figcaption>
       </figure>
 
-    </div>
+    </div>   
   </header>
   <?php endwhile;
 
