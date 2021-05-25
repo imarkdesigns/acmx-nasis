@@ -145,6 +145,23 @@ if ( ! is_singular( 'nasis_investments' ) ) :
                 <li><a href="<?php echo esc_url( site_url('/wp-content/uploads/2019/03/NAS-Investment-Solutions-Brochure.pdf') ); ?>">Download NASIS Brochure</a></li>
 			</ul>
 		</li>
+    <?php $investment = new WP_Query([ 
+        'post_type'      => ['nasis_investments'],
+        'posts_per_page' => -1,
+        'post__not_in'   => [ 1702 ],
+        'has_password'   => false,
+        'post_status'    => 'publish',
+        'meta_key'       => 'property_status',
+        'meta_value'     => 'Available'
+    ]); ?>
+    <li class="uk-parent">
+        <a href="#">Other Investments</a>
+        <ul class="uk-nav-sub">
+            <?php while( $investment->have_posts() ) : $investment->the_post(); ?>
+            <li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+            <?php endwhile; wp_reset_query(); ?>
+        </ul>
+    </li>     
 		<li class="uk-parent">
 			<a href="#">Investment Info</a>
 			<ul class="uk-nav-sub">

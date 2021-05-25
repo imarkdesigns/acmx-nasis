@@ -121,6 +121,25 @@ if ( $post->post_type != 'nasis_investments' || get_field('property_status') == 
                         </ul>
                     </div>
                 </li>
+                <?php $investment = new WP_Query([ 
+                    'post_type'      => ['nasis_investments'],
+                    'posts_per_page' => -1,
+                    'post__not_in'   => [ 1702 ],
+                    'has_password'   => false,
+                    'post_status'    => 'publish',
+                    'meta_key'       => 'property_status',
+                    'meta_value'     => 'Available'
+                ]); ?>
+                <li data-uk-dropdown="{mode: 'click'}">
+                    <a href="#">Other Investments <i class="uk-icon-caret-down"></i></a>
+                    <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-bottom">
+                        <ul class="uk-nav uk-nav-dropdown">
+                            <?php while( $investment->have_posts() ) : $investment->the_post(); ?>
+                            <li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+                            <?php endwhile; wp_reset_query(); ?>
+                        </ul>
+                    </div>
+                </li>
                 <li data-uk-dropdown="{mode: 'click'}">
                     <a href="#">Investment Info <i class="uk-icon-caret-down"></i></a>
                     <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-bottom">
