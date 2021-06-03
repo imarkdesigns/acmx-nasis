@@ -300,12 +300,12 @@ include( locate_template( _inc.'local-nav.php', false, true ) );
 
         <?php
 	        $tab = $_GET['tab'];
-			    $switch = $_GET['q'];
+			$switch = $_GET['q'];
 	    ?>
 
         <ul class="uk-tab" data-uk-tab="{connect:'#my-id', animation: 'uk-animation-fade'}">
             <li class="<?php echo ( $tab == 'guide' || $switch == 'guide' ) ? 'uk-active' : ''; ?>"><a href="#">Download Our Free 1031 Exchange Guides</a></li>
-            <li class="<?php echo ( $tab == 'bookletform' || $switch == 'booklet' ) ? 'uk-active' : ''; ?>"><a href="#">Download FREE Investment White Papers</a></li>
+            <li class="<?php echo ( $tab == 'booklet' || $switch == 'booklet' ) ? 'uk-active' : ''; ?>"><a href="#">Download FREE Investment White Papers</a></li>
         </ul>
 
         <ul id="my-id" class="uk-switcher">
