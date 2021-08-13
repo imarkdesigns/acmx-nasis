@@ -219,83 +219,52 @@ $_GET['rkp'] = get_field('contact_name');
                 </article>
             </figcaption>
             <?php endif; ?>
-            
-			<?php if ( ! get_field( 'disable_additional_content' ) ) : // If nnot active, show this content
-
-            if ( ! wp_is_mobile() ) : ?>
-                <aside class="uk-position-cover uk-overlay-panel uk-overlay-primary uk-hidden-small">
-                    <div class="uk-slidenav-position uk-visible-toggle" data-uk-slider="infinite: false">
-
-                        <div class="uk-slider-container">
-                            <ul class="uk-slider uk-grid-width-1-1">
-                                <?php while ( have_rows( 'additional_content_list' ) ) : the_row(); 
-
-                                $content_photo = get_sub_field( 'content_photo' );
-                                $content_label = get_sub_field( 'content_label' );
-                                $content_pdf   = get_sub_field( 'content_pdf' );
-                                $content_link  = get_sub_field( 'content_link' );
-                                $content_video = get_sub_field( 'content_video' ); ?>
-                                <li>
-                                    <div class="uk-card uk-flex">
-                                        <?php echo wp_get_attachment_image( $content_photo['id'], [ 145, 110, true ] ); ?>
-                                        <div class="uk-panel">
-                                            <h1><?php echo $content_photo['title']; ?></h1>
-                                            <?php if ( $content_pdf ) {
-                                                echo '<a href="'.$content_pdf['url'].'" data-link="PDF Download" title="'.$content_pdf['filename'].'" target="_blank">'.$content_label.'</a>';
-                                            }
-
-                                            elseif ( $content_link ) {
-                                                echo '<a href="'.$content_link.'" data-link="Blog/News" target="_blank">'.$content_label.'</a>';
-                                            }
-
-                                            elseif ( $content_video ) {
-                                                echo '<a href="'.$content_video.'" data-link="Youtube Video" target="_blank">'.$content_label.'</a>';
-                                            } ?>
-                                        </div>
-                                    </div>
-                                </li>
-                                <?php endwhile; ?>
-                            </ul>
-                        </div>
-
-                        <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slider-item="previous"></a>
-                        <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slider-item="next"></a>
-
-                    </div>
-                </aside>
-            <?php else : ?>
-                <aside class=" uk-visible-small --ext-details">
-                    <?php while ( have_rows( 'additional_content_list' ) ) : the_row(); 
-
-                    $content_photo = get_sub_field( 'content_photo' );
-                    $content_label = get_sub_field( 'content_label' );
-                    $content_pdf   = get_sub_field( 'content_pdf' );
-                    $content_link  = get_sub_field( 'content_link' );
-                    $content_video = get_sub_field( 'content_video' ); ?>
-                    <div class="uk-card uk-flex">
-                        <?php echo wp_get_attachment_image( $content_photo['id'], [ 145, 110, true ] ); ?>
-                        <div class="uk-panel">
-                            <h1><?php echo $content_photo['title']; ?></h1>
-                            <?php if ( $content_pdf ) {
-                                echo '<a href="'.$content_pdf['url'].'" title="'.$content_pdf['filename'].'" target="_blank">'.$content_label.'</a>';
-                            }
-
-                            elseif ( $content_link ) {
-                                echo '<a href="'.$content_link.'" target="_blank">'.$content_label.'</a>';
-                            }
-
-                            elseif ( $content_video ) {
-                                echo '<a href="'.$content_video.'" target="_blank">'.$content_label.'</a>';
-                            } ?>
-                        </div>
-                    </div>
-                    <?php endwhile; ?>
-                </aside>
-            <?php endif; 
-
-            // Disable Additional Content
-            endif; ?>            
         </figure>
+    </section>
+
+    <section class="uk-block uk-block-secondary section-articles-plus">
+        <div class="uk-container">
+    
+            <div class="uk-slidenav-position uk-visible-toggle" data-uk-slider="infinite: false">
+
+                <div class="uk-slider-container">
+                    <ul class="uk-slider uk-grid uk-grid-width-small-1-2 uk-grid-width-large-1-2 uk-grid-width-xlarge-1-3">
+                        <?php while ( have_rows( 'additional_content_list' ) ) : the_row(); 
+
+                        $content_photo = get_sub_field( 'content_photo' );
+                        $content_label = get_sub_field( 'content_label' );
+                        $content_pdf   = get_sub_field( 'content_pdf' );
+                        $content_link  = get_sub_field( 'content_link' );
+                        $content_video = get_sub_field( 'content_video' ); ?>
+                        <li>
+                            <div class="uk-card uk-flex">
+                                <?php echo wp_get_attachment_image( $content_photo['id'], [ 145, 110, true ] ); ?>
+                                <div class="uk-panel">
+                                    <h1><?php echo $content_photo['title']; ?></h1>
+                                    <?php if ( $content_pdf ) {
+                                        echo '<a href="'.$content_pdf['url'].'" data-link="PDF Download" title="'.$content_pdf['filename'].'" target="_blank">'.$content_label.'</a>';
+                                    }
+
+                                    elseif ( $content_link ) {
+                                        echo '<a href="'.$content_link.'" data-link="Blog/News" target="_blank">'.$content_label.'</a>';
+                                    }
+
+                                    elseif ( $content_video ) {
+                                        echo '<a href="'.$content_video.'" data-link="Youtube Video" target="_blank">'.$content_label.'</a>';
+                                    } ?>
+                                </div>
+                            </div>
+                        </li>
+                        <?php endwhile; ?>
+                    </ul>
+                </div>
+
+                <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slider-item="previous"></a>
+                <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slider-item="next"></a>
+
+            </div>
+    
+        </div>
     </section>
 
     <section id="LightBox" class="uk-block section-gallery">
@@ -322,7 +291,7 @@ $_GET['rkp'] = get_field('contact_name');
                 <?php } ?>
             </ul>
 
-            <div class="uk-grid-width-1-2 uk-grid-width-small-1-3 uk-grid-width-medium-1-4 --lb-list" data-uk-grid="{controls:'#LightBoxControl', gutter: 5}">
+            <div class="uk-grid-width-1-1 uk-grid-width-small-1-2 uk-grid-width-medium-1-4 --lb-list" data-uk-grid="{controls:'#LightBoxControl', gutter: 5}">
                 <?php foreach ( $LBPhotos as $LBPhoto ) { ?>
                 <div data-filter="<?php echo $LBPhoto['description']; ?>" data-uk-filter="<?php echo $LBPhoto['description']; ?>">
                     <a class="uk-thumbnail" href="<?php echo $LBPhoto['url']; ?>" data-uk-lightbox="{group: '<?php echo $LBPhoto['description']; ?>'}" title="<?php echo $LBPhoto['title']; ?>">

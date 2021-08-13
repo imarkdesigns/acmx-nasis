@@ -749,12 +749,48 @@
     }
 } // End Records
 
+.section-articles-plus {
+
+    img {
+        width: 145px;
+        min-height: 110px;
+        border-radius: 5px;
+        box-shadow: 0 5px 15px rgba(0,0,0,.16);
+    }
+
+    .uk-card.uk-flex {
+        align-items: flex-start;
+    }
+
+    .uk-card > .uk-panel {
+        // max-width: 235px;
+        margin-left: 15px;
+    }
+
+    .uk-card > .uk-panel h1 {
+        font-size: 16px;
+        font-family: @proxima_bold;
+        color: rgba(#FFF, .8);
+        line-height: 1.4;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .uk-card > .uk-panel a {
+        font-family: proxima_nova_light,sans-serif;
+        font-size: 14px;
+        color: #F36F21;
+        text-decoration: none;
+    }
+
+}
+
 .section-gallery {
     overflow: hidden;
 
     h3 {
         font-family: @prata;
         font-size: 1.5rem;
+        line-height: 1.4;
         text-transform: capitalize;
     }
 
