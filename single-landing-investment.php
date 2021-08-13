@@ -225,10 +225,10 @@ $_GET['rkp'] = get_field('contact_name');
     <section class="uk-block uk-block-secondary section-articles-plus">
         <div class="uk-container">
     
-            <div class="uk-slidenav-position uk-visible-toggle" data-uk-slider="infinite: false">
+            <div class="uk-slidenav-position uk-visible-toggle" data-uk-slider>
 
                 <div class="uk-slider-container">
-                    <ul class="uk-slider uk-grid uk-grid-width-small-1-2 uk-grid-width-large-1-2 uk-grid-width-xlarge-1-3">
+                    <ul class="uk-slider uk-grid-medium uk-grid-width-small-1-2 uk-grid-width-large-1-2 uk-grid-width-xlarge-1-3">
                         <?php while ( have_rows( 'additional_content_list' ) ) : the_row(); 
 
                         $content_photo = get_sub_field( 'content_photo' );
