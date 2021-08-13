@@ -70,13 +70,17 @@ function initMarker( $marker, map ) {
     var url = new URL($origin2);
     var p = url.searchParams.get("p");
 
-    console.log($origin1);
+    
 
     if ( window.location.pathname == "/property/walgreens-burbank-illinois" ) {
-        $mapIcon = 'https://www.nasinvestmentsolutions.com/wp-content/themes/nasis/assets/images/walgreens-burbank-illinois-marker.png';
+        $mapIcon = 'https://www.nasinvestmentsolutions.com/wp-content/themes/acmx-nasis/assets/images/walgreens-burbank-illinois-marker.png';
     } else if ( window.location.pathname == "/property/garver-national-headquarters" || p === '2700' ) {
-        $mapIcon = 'https://www.nasinvestmentsolutions.com/wp-content/themes/nasis/assets/images/map-marker-garver.png';
+        $mapIcon = 'https://www.nasinvestmentsolutions.com/wp-content/themes/acmx-nasis/assets/images/map-marker-garver.png';
+    } else {
+        $mapIcon = window.location.origin + '/wp-content/themes/acmx-nasis/assets/images/default-nasis-marker.png';
     }
+
+    console.log($mapIcon);
 
     // Create marker instance.
     var marker = new google.maps.Marker({

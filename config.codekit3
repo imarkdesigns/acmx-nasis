@@ -404,6 +404,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/assets/images/default-nasis-marker.png": {
+		"ft": 32768,
+		"iS": 2490,
+		"oA": 0,
+		"oAP": "/assets/images/default-nasis-marker.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/assets/images/icon-contact-mail.png": {
 		"ft": 32768,
 		"iS": 44034,
@@ -3889,7 +3900,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "https://nasis.local:8890",
+	"externalServerAddress": "https://staging-nasis.local",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",

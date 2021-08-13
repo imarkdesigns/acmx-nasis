@@ -205,7 +205,7 @@ $_GET['rkp'] = get_field('contact_name');
     </section>
     <?php endif; ?>
 
-    <section id="NASISRecords" class="uk-block section-records">
+    <section class="uk-block section-records">
         <figure class="uk-overlay">
         <?php $bgSummary = get_field('investment_highlight_background');
 
@@ -296,31 +296,6 @@ $_GET['rkp'] = get_field('contact_name');
             // Disable Additional Content
             endif; ?>            
         </figure>
-        <div class="uk-container">
-
-            <article class="uk-article uk-text-center track-record-list">
-                <h2>NAS Investment Property Track Record - Since 2008</h2>
-            
-                <ul>
-                    <?php while ( have_rows('record_asset') ) : the_row(); 
-                    $iconRecord = get_sub_field('icon'); ?>
-                    <li>
-                        <span><?php echo wp_get_attachment_image( $iconRecord['id'], 'full' ); ?></span>
-                        <?php the_sub_field('value'); ?> <small><?php the_sub_field('label'); ?></small>
-                    </li>
-                    <?php endwhile; ?>
-
-                    <li class="uk-divider"> <hr> </li>
-                    
-                    <?php while ( have_rows('record_value') ) : the_row(); ?>
-                    <li>
-                        <?php the_sub_field('value'); ?> <small><?php the_sub_field('notation'); ?></small> <span><?php the_sub_field('label'); ?></span>
-                    </li>
-                    <?php endwhile; ?>
-                </ul>
-            </article>
-
-        </div>
     </section>
 
     <section id="LightBox" class="uk-block section-gallery">
@@ -347,9 +322,9 @@ $_GET['rkp'] = get_field('contact_name');
                 <?php } ?>
             </ul>
 
-            <div class="uk-grid-width-1-2 uk-grid-width-small-1-3 uk-grid-width-medium-1-4 " data-uk-grid="{controls:'#LightBoxControl', gutter: 5}">
+            <div class="uk-grid-width-1-2 uk-grid-width-small-1-3 uk-grid-width-medium-1-4 --lb-list" data-uk-grid="{controls:'#LightBoxControl', gutter: 5}">
                 <?php foreach ( $LBPhotos as $LBPhoto ) { ?>
-                <div data-uk-filter="<?php echo $LBPhoto['description']; ?>">
+                <div data-filter="<?php echo $LBPhoto['description']; ?>" data-uk-filter="<?php echo $LBPhoto['description']; ?>">
                     <a class="uk-thumbnail" href="<?php echo $LBPhoto['url']; ?>" data-uk-lightbox="{group: '<?php echo $LBPhoto['description']; ?>'}" title="<?php echo $LBPhoto['title']; ?>">
                         <?php echo wp_get_attachment_image( $LBPhoto['id'], 'full' ); ?>
                         <div class="uk-thumbnail-caption"><?php echo $LBPhoto['title']; ?></div>
@@ -407,6 +382,34 @@ $_GET['rkp'] = get_field('contact_name');
 	  	<?php endif; ?>
     </section>
     <?php endif; ?>
+
+    <section id="NASISRecords" class="uk-block section-records">
+        <div class="uk-container">
+
+            <article class="uk-article uk-text-center track-record-list">
+                <h2>NAS Investment Property Track Record - Since 2008</h2>
+            
+                <ul>
+                    <?php while ( have_rows('record_asset') ) : the_row(); 
+                    $iconRecord = get_sub_field('icon'); ?>
+                    <li>
+                        <span><?php echo wp_get_attachment_image( $iconRecord['id'], 'full' ); ?></span>
+                        <?php the_sub_field('value'); ?> <small><?php the_sub_field('label'); ?></small>
+                    </li>
+                    <?php endwhile; ?>
+
+                    <li class="uk-divider"> <hr> </li>
+                    
+                    <?php while ( have_rows('record_value') ) : the_row(); ?>
+                    <li>
+                        <?php the_sub_field('value'); ?> <small><?php the_sub_field('notation'); ?></small> <span><?php the_sub_field('label'); ?></span>
+                    </li>
+                    <?php endwhile; ?>
+                </ul>
+            </article>
+
+        </div>
+    </section>
 
     <?php $exchange = new WP_Query([ 'post_type' => 'page', 'page_id' => 1279, 'posts_per_page' => 1 ]);
     while ( $exchange->have_posts() ) : $exchange->the_post(); ?>

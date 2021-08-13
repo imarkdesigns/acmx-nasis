@@ -64,5 +64,24 @@
     //     queue: false
     // });
 
+    // LightBox
+    $(window).on('load', function() {
+
+        if ( $('#LightBoxControl li').first().hasClass('uk-active') ) {
+            $('.--lb-list div a').attr( 'data-uk-lightbox', '{group: "All"}' );
+        }
+
+        $('#LightBoxControl li').siblings().not(":first").click(function() {
+            $('.--lb-list > div').each(function() {
+               $(this).find('a').attr( 'data-uk-lightbox', '{group: "'+$(this).data('filter')+'"}' );
+            });
+        });
+
+        $('#LightBoxControl li').first().click(function() {
+            $('.--lb-list div a').attr( 'data-uk-lightbox', '{group: "All"}' );
+        });
+
+    });
+
 
 }) (jQuery);
