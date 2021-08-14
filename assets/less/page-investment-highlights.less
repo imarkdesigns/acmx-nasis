@@ -135,13 +135,12 @@
     img {
         position: absolute;
         top: 0;
-        .square(100%);
+        left: 0;
+        right: 0;
+        bottom: 0;
         object-fit: cover;
         z-index: 0;
-
-        @media only screen and ( max-width: 639px ) {
-            object-position: 20%;
-        }
+        .square(100%);
     }
 
     .uk-container {
@@ -201,7 +200,7 @@
 
         li {
             position: relative;
-            font-size: 36px;
+            font-size: 32px;
             font-family: 'Prata', serif;
             margin-bottom: 5px;
             padding-left: 25px;
@@ -209,7 +208,7 @@
             &::before {
                 content: "";
                 position: absolute;
-                top: 9px;
+                top: 7px;
                 left: 0;
                 display: block;
                 background: linear-gradient(12deg, #ab9c8f 0%,#ab9c8f 47%,#ffffff 47%,#ffffff 47%,#ffffff 49%,#ffffff 51%,#ffffff 54%,#ffffff 54%,#f37021 54%,#f37021 100%);
@@ -248,14 +247,38 @@
             color: #FFF;
         }
 
-        @media only screen and ( max-width: 1199px ) {
+        @media only screen and ( max-width: 1441px ) {
 
+            ul li {
+                font-size: 24px;
+
+                &::before {
+                    top: 6px;
+                }
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
         }
 
 
         @media only screen and ( max-width: 959px ) {
+
             ul li {
                 font-size: 18px;
+
+                &::before {
+                    top: 3px;
+                }
+            }
+
+            h1 {
+                font-size: 24px;
             }
 
             h3 {

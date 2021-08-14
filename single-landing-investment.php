@@ -117,9 +117,12 @@ $_GET['rkp'] = get_field('contact_name');
     <?php get_template_part( _menu ); ?>
 
     <header class="hero">
-    <?php $bgHeader = get_field('header_background');
+    <?php 
+        $bgHeader = get_field('header_background');
+        $positionX = get_field('header_position_horizontal') . '%';
+        $positionY = get_field('header_position_vertical') . '%';
 
-        echo wp_get_attachment_image( $bgHeader['id'], [ 1920, 720, true ] ); 
+        echo wp_get_attachment_image( $bgHeader['id'], [ 1920, 720, true ], '', [ 'style' => 'object-position: '.$positionX.' '.$positionY.'' ] ); 
 
         $blurbs = get_field('header_blurbs');
         $remov  = array("[", "]");
@@ -128,7 +131,7 @@ $_GET['rkp'] = get_field('contact_name');
         ?>
 
         <div class="uk-container uk-container-expand">
-            <article class="uk-article uk-width-large-1-1 uk-width-xlarge-1-2">
+            <article class="uk-article uk-width-large-3-4 uk-width-xlarge-1-2">
                 <p><?php echo $blurbs; ?></p>
                 <?php the_field('header_content');  ?>
             </article>
