@@ -32,9 +32,9 @@ if ( ! post_password_required() ) :
 
       get_template_part( 'single', 'articles' );
 
-      if ( $post->ID == '1798' || $post->ID == '1510' || $post->ID == '1399' ) { 
-        include_once( get_template_directory() . '/modules/inc/global-investment-modal.php' );
-      }
+      // if ( $post->ID == '1798' || $post->ID == '1510' || $post->ID == '1399' ) { 
+      //   include_once( get_template_directory() . '/modules/inc/global-investment-modal.php' );
+      // }
     }
 
     else if ( $post->post_type == 'glossary' ) {

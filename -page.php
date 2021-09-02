@@ -11,9 +11,9 @@ get_template_part( _base_header );
     
     get_template_part( _page, $post->post_name );
     
-    if ( $post->ID == '1279' || $post->ID == '14' ) {
-        include_once( get_template_directory() . '/modules/inc/global-investment-modal.php' );
-    }
+    // if ( $post->ID == '1279' || $post->ID == '14' ) {
+    //     include_once( get_template_directory() . '/modules/inc/global-investment-modal.php' );
+    // }
     
       
 get_template_part( _base_footer );
