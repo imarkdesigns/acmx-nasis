@@ -43,9 +43,13 @@ if ( get_field('highlight_video') ) {
 	} else {
 		echo do_shortcode( '[wp-video-popup id="HLMVideo" hide-related="1" video="'.$CRVideo.'"]' );		
 	}
-} elseif ( get_field('exterior') ) {
+}
+
+if ( get_field('exterior') ) {
     echo do_shortcode( '[wp-video-popup id="EXTVideo" hide-related="1" video="'.$HLExterior.'"]' );
-} elseif ( get_field('interior') ) {
+}
+
+if ( get_field('interior') ) {
     echo do_shortcode( '[wp-video-popup id="INTVideo" hide-related="1" video="'.$HLInterior.'"]' );
 }
 

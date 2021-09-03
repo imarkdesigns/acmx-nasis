@@ -12,27 +12,38 @@ if ( $post->post_type == 'exchange_articles' ) {
     $extNav = 'gn-fixed';
 }
 
-// Crack down the Videos
-$HLVideo    = get_field('highlight_video');
-$CRVideo    = get_field('client_relation_video');
-$HLExterior = get_field('exterior');
-$HLInterior = get_field('interior');
-$HLAddition = get_field('additional_video');
-
+// Highlights
 if ( get_field('highlight_video') ) {
-
+    // Differentiate between Client Relation & Direct Video
 	if ( ! $_GET['ref'] && ! $_COOKIE['__client-relation']  ) {
 		echo do_shortcode( '[wp-video-popup id="HLMVideo" hide-related="1" video="'.$HLVideo.'"]' );	
 	} else {
 		echo do_shortcode( '[wp-video-popup id="HLMVideo" hide-related="1" video="'.$CRVideo.'"]' );		
 	}
-    
-} elseif ( get_field('exterior') ) {
-    echo do_shortcode( '[wp-video-popup id="EXTVideo" hide-related="1" video="'.$HLExterior.'"]' );
-} elseif ( get_field('interior') ) {
-    echo do_shortcode( '[wp-video-popup id="INTVideo" hide-related="1" video="'.$HLInterior.'"]' );
-} elseif ( get_field('additional_video') ) {
-    echo do_shortcode( '[wp-video-popup id="YTVideo" hide-related="1" video="'.$HLAddition.'"]' );
+} 
+
+// Exterior Video
+if ( get_field('exterior_video') ) {
+    echo do_shortcode( '[wp-video-popup id="EXTVideo" hide-related="1" video="'.get_field('exterior_video').'"]' );
+} 
+
+// Interior Video
+if ( get_field('interior_video') ) {
+    echo do_shortcode( '[wp-video-popup id="INTVideo" hide-related="1" video="'.get_field('interior_video').'"]' );
+}
+
+// Site Tour Video
+if ( get_field('tour_video') ) {
+    echo do_shortcode( '[wp-video-popup id="STVideo" hide-related="1" video="'.get_field('tour_video').'"]' );
+}
+
+// Additional Videos
+$av = 0;
+while ( have_rows( 'additional_videos' ) ) {
+    the_row();
+    $av++;
+
+    echo do_shortcode( '[wp-video-popup id="AddVideo'.$av.'" hide-related="1" video="'.get_sub_field('video_external').'"]' );
 }
 
 if ( $post->post_type != 'nasis_investments' || get_field('property_status') == 'Sold Out' ) : ?>
@@ -67,13 +78,17 @@ if ( $post->post_type != 'nasis_investments' || get_field('property_status') == 
                                 <ul class="uk-nav uk-nav-dropdown">
                                     <li class="uk-nav-header">Videos</li>
                                     	<?php if ( get_field('highlight_video') ) : ?>
-                                    <li><a href="" class="wp-video-popup HLMVideo">Investment Highlights</a></li>
+                                    <li><a href="#" class="wp-video-popup HLMVideo">Investment Highlights</a></li>
                                     <?php endif; ?>
                                     
-                                    <?php if ( get_field('exterior') ) : ?>
-                                    <li><a href="#" class="wp-video-popup EXTVideo">Exterior Tour</a></li>
-                                    <?php elseif ( get_field('interior') ) : ?>
-                                    <li><a href="#" class="wp-video-popup INTVideo">Interior Tour</a></li>
+                                    <?php if ( get_field('exterior_video') ) : ?>
+                                    <li><a href="#" class="wp-video-popup EXTVideo">Exterior Video</a></li>
+                                    <?php endif;
+                                    if ( get_field('interior_video') ) : ?>
+                                    <li><a href="#" class="wp-video-popup INTVideo">Interior Video</a></li>
+                                    <?php endif; 
+                                    if ( get_field('tour_video') ) : ?>
+                                    <li><a href="#" class="wp-video-popup EXTVideo">Site Tour Video</a></li>
                                     <?php endif; ?>
                                     <li><a href="<?php echo esc_url( home_url( '#NASISCompanyVideo' ) ); ?>">NASIS Company Video</a></li>
                                 </ul>
@@ -84,11 +99,15 @@ if ( $post->post_type != 'nasis_investments' || get_field('property_status') == 
                                     <li><a href="<?php echo site_url('#LightBox'); ?>" data-uk-smooth-scroll="{offset: 60}">Property Photos</a></li>
                                 </ul>
                             </div>
-                            <?php if ( get_field('additional_video') ) : ?>
+                            <?php if ( have_rows( 'additional_videos' ) ) : ?>
                             <div class="uk-width-1-1">
                                 <ul class="uk-nav uk-nav-dropdown">
-                                    <li class="uk-nav-header">Additional Info</li>
-                                    <li><a href="#" class="wp-video-popup YTVideo"><?php echo ( get_field( 'additional_video_label' ) ) ? get_field( 'additional_video_label' ) : 'Watch Video to Learn More'; ?> </a></li>
+                                    <li class="uk-nav-header">Additional Videos</li>
+                                    <?php 
+                                    $v = 0;
+                                    while ( have_rows( 'additional_videos' ) ) : the_row(); $v++; ?>
+                                    <li><a href="#" class="wp-video-popup AddVideo<?php echo $v; ?>"><?php echo ( get_sub_field( 'video_label' ) ) ? get_sub_field( 'video_label' ) : 'Watch Video to Learn More'; ?> </a></li>
+                                    <?php endwhile; ?>
                                 </ul>
                             </div>
                             <?php endif; ?>
