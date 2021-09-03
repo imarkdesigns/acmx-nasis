@@ -1,10 +1,9 @@
 <?php
 // Mailchimp API
-include ( get_template_directory() . '/modules/inc/mailchimp-api.php' );
+// include ( get_template_directory() . '/modules/inc/mailchimp-api.php' );
 
 // Download Property Brochure
-/*
-if ( $_GET['dpb'] == 'true' ) {
+/* if ( $_GET['dpb'] == 'true' ) {
     $brochure = get_field('brochure_file');
 
     if ( get_field('brochure_file') ) {
@@ -24,7 +23,7 @@ if ( $_GET['dpb'] == 'true' ) {
         http_response_code(404);
         exit;
     }
-}*/
+} */
 
 // Fill-in the WPForms isCR
 // parameter to activate: ?ref=324d8a1d3f81e730d5099a48cee0c5b6
@@ -39,13 +38,11 @@ $HLExterior = get_field('exterior');
 $HLInterior = get_field('interior');
 
 if ( get_field('highlight_video') ) {
-	
 	if ( ! $_GET['ref'] && ! $_COOKIE['__client-relation']  ) {
-		echo do_shortcode( '[wp-video-popup id="HLVideo" hide-related="1" video="'.$HLVideo.'"]' );		
+		echo do_shortcode( '[wp-video-popup id="HLMVideo" hide-related="1" video="'.$HLVideo.'"]' );	
 	} else {
-		echo do_shortcode( '[wp-video-popup id="HLVideo" hide-related="1" video="'.$CRVideo.'"]' );		
+		echo do_shortcode( '[wp-video-popup id="HLMVideo" hide-related="1" video="'.$CRVideo.'"]' );		
 	}
-    
 } elseif ( get_field('exterior') ) {
     echo do_shortcode( '[wp-video-popup id="EXTVideo" hide-related="1" video="'.$HLExterior.'"]' );
 } elseif ( get_field('interior') ) {

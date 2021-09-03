@@ -64,25 +64,40 @@ function initMarker( $marker, map ) {
         lng: parseFloat( lng )
     };
     
-    $origin1 = window.location.pathname;
-    $origin2 = window.location.href;
+    var $origin1 = window.location.pathname;
+    var $origin2 = window.location.href;
     
     var url = new URL($origin2);
     var p = url.searchParams.get("p");
 
-    
+    console.log(url);
 
-    if ( window.location.pathname == "/property/walgreens-burbank-illinois" ) {
-        $mapIcon = 'https://www.nasinvestmentsolutions.com/wp-content/themes/acmx-nasis/assets/images/walgreens-burbank-illinois-marker.png';
-    } else if ( window.location.pathname == "/property/garver-national-headquarters" || p === '2700' ) {
-        $mapIcon = 'https://www.nasinvestmentsolutions.com/wp-content/themes/acmx-nasis/assets/images/map-marker-garver.png';
+    var $setPath   = url['pathname'].split('/'),
+        $setName   = $setPath[2].split('-'),
+        $imgMarker = $setName[0] +'-'+ $setName[1],
+        $default   = 'nasis-marker';
+
+
+    var $assets   = '/wp-content/themes/acmx-nasis/assets/markers/',
+        $extName  = '.png',
+        $pathName = url['origin'] + $assets + $imgMarker + $extName,
+        $callback = url['origin'] + $assets + $default + $extName;
+
+    function doesFileExist(urlToFile) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('HEAD', urlToFile, false);
+        xhr.send();
+         
+        return xhr.status !== 404;
+    }
+        
+    if ( doesFileExist($pathName) === true ) {
+        $mapIcon = $pathName;
     } else {
-        $mapIcon = window.location.origin + '/wp-content/themes/acmx-nasis/assets/images/default-nasis-marker.png';
+        var $mapMarker = url['origin'] + $assets + $default + $extName;
+        $mapIcon = $mapMarker;
     }
 
-    console.log($mapIcon);
-
-    // Create marker instance.
     var marker = new google.maps.Marker({
         position : latLng,
         map: map,

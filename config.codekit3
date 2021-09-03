@@ -1260,6 +1260,50 @@
 		"sI": 1,
 		"sU": 1
 		},
+	"/assets/markers/garver-national.png": {
+		"ft": 32768,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "/assets/markers/garver-national.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/markers/nasis-marker.png": {
+		"ft": 32768,
+		"iS": 1163,
+		"oA": 0,
+		"oAP": "/assets/markers/nasis-marker.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/markers/press-ganey.png": {
+		"ft": 32768,
+		"iS": 2643,
+		"oA": 0,
+		"oAP": "/assets/markers/press-ganey.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/markers/walgreens-burbank.png": {
+		"ft": 32768,
+		"iS": 4935,
+		"oA": 0,
+		"oAP": "/assets/markers/walgreens-burbank.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/assets/scripts/inc/about.js": {
 		"bF": 0,
 		"ft": 64,
@@ -1399,17 +1443,6 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/assets/scripts/plugins/acf-map.min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
-	"/assets/scripts/plugins/acf-map.min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/assets/scripts/plugins/acf-map.min.min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0

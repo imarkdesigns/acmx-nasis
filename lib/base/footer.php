@@ -85,24 +85,28 @@ window.addEventListener('load', function() {
     // Download Property Brochure
     if ( $_GET['dpb'] == 'true' ) :
 
-        if ( ! $_GET['ref'] && ! $_COOKIE['__client-relation'] ) {
+        if ( ! $_GET['ref'] || ! $_COOKIE['__client-relation'] ) {
             $brochure = get_field( 'brochure_file' );
         } else {
             $brochure = get_field( 'CR_brochure_file' );
-        } ?>
+        } 
+        
+        $brochure = get_field( 'brochure_file' ); ?>
 
         // minified script
         jQuery(window).on("load",function(){if("true"==function(e){var n,o,t=window.location.search.substring(1).split("&");for(o=0;o<t.length;o++)if((n=t[o].split("="))[0]===e)return void 0===n[1]||decodeURIComponent(n[1])}("dpb")){!function(e,n){if(window.ActiveXObject){if(window.ActiveXObject&&document.execCommand){var o=window.open("fileURL","_blank");o.document.close(),o.document.execCommand("SaveAs",!0,n||e),o.close()}}else{var t=document.createElement("a");t.href=e,t.target="_blank";var i=e.substring(e.lastIndexOf("/")+1);if(t.download=n||i,navigator.userAgent.toLowerCase().match(/(ipad|iphone|safari)/)&&navigator.userAgent.search("Chrome")<0)document.location=t.href;else{var a=new MouseEvent("click",{view:window,bubbles:!0,cancelable:!1});t.dispatchEvent(a),(window.URL||window.webkitURL).revokeObjectURL(t.href)}}}("<?php echo $brochure['url']; ?>","<?php echo $brochure['filename']; ?>")}});
 
         // activate modal
-        <?php if ( $_GET['m'] == 'open' ) {
-            $modal  = 'setTimeout(function() {';
-            $modal .= 'var modal = UIkit.modal(".responseModal");';
-            $modal .= 'modal.show();';
-            $modal .= '}, 3500);';
-        } return $modal; ?>
+        <?php if ( $_GET['m'] == 'open' ) : ?>
 
-    <?php endif;
+            setTimeout(function() {
+                var modal = UIkit.modal(".responseModal");
+                modal.show();
+            }, 3500);
+        
+        <?php endif;
+
+    endif;
     // End download property brochure ?>
 
     <?php
