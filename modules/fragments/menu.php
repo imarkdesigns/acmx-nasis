@@ -12,6 +12,9 @@ if ( $post->post_type == 'exchange_articles' ) {
     $extNav = 'gn-fixed';
 }
 
+$HLVideo    = get_field('highlight_video');
+$CRVideo    = get_field('client_relation_video');
+
 // Highlights
 if ( get_field('highlight_video') ) {
     // Differentiate between Client Relation & Direct Video
@@ -88,7 +91,7 @@ if ( $post->post_type != 'nasis_investments' || get_field('property_status') == 
                                     <li><a href="#" class="wp-video-popup INTVideo">Interior Video</a></li>
                                     <?php endif; 
                                     if ( get_field('tour_video') ) : ?>
-                                    <li><a href="#" class="wp-video-popup EXTVideo">Site Tour Video</a></li>
+                                    <li><a href="#" class="wp-video-popup STVideo">Site Tour Video</a></li>
                                     <?php endif; ?>
                                     <li><a href="<?php echo esc_url( home_url( '#NASISCompanyVideo' ) ); ?>">NASIS Company Video</a></li>
                                 </ul>
@@ -115,7 +118,7 @@ if ( $post->post_type != 'nasis_investments' || get_field('property_status') == 
                     </div>
                 </li>
                 <li><a href="#property-map" data-uk-smooth-scroll="{offset: 80}">Map</a></li>
-				<?php if ( ! $_GET['ref'] && ! $_COOKIE['__client-relation'] ) : ?>
+				<?php if ( empty($_GET['ref']) && isset($_COOKIE['__client-relation']) != 'active' ) : ?>
                 <li data-uk-dropdown="{mode: 'click'}">
                     <a href="#">Contact <i class="uk-icon-caret-down"></i></a>
                     <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-bottom">

@@ -34,23 +34,38 @@
 // Crack down the Videos
 $HLVideo    = get_field('highlight_video');
 $CRVideo    = get_field('client_relation_video');
-$HLExterior = get_field('exterior');
-$HLInterior = get_field('interior');
 
 if ( get_field('highlight_video') ) {
+    // Differentiate between Client Relation & Direct Video
 	if ( ! $_GET['ref'] && ! $_COOKIE['__client-relation']  ) {
-		echo do_shortcode( '[wp-video-popup id="HLMVideo" hide-related="1" video="'.$HLVideo.'"]' );	
+		echo do_shortcode( '[wp-video-popup id="HLVideo" hide-related="1" video="'.$HLVideo.'"]' );	
 	} else {
-		echo do_shortcode( '[wp-video-popup id="HLMVideo" hide-related="1" video="'.$CRVideo.'"]' );		
+		echo do_shortcode( '[wp-video-popup id="HLVideo" hide-related="1" video="'.$CRVideo.'"]' );		
 	}
+} 
+
+// Exterior Video
+if ( get_field('exterior_video') ) {
+    echo do_shortcode( '[wp-video-popup id="EXTVideo" hide-related="1" video="'.get_field('exterior_video').'"]' );
+} 
+
+// Interior Video
+if ( get_field('interior_video') ) {
+    echo do_shortcode( '[wp-video-popup id="INTVideo" hide-related="1" video="'.get_field('interior_video').'"]' );
 }
 
-if ( get_field('exterior') ) {
-    echo do_shortcode( '[wp-video-popup id="EXTVideo" hide-related="1" video="'.$HLExterior.'"]' );
+// Site Tour Video
+if ( get_field('tour_video') ) {
+    echo do_shortcode( '[wp-video-popup id="STVideo" hide-related="1" video="'.get_field('tour_video').'"]' );
 }
 
-if ( get_field('interior') ) {
-    echo do_shortcode( '[wp-video-popup id="INTVideo" hide-related="1" video="'.$HLInterior.'"]' );
+// Additional Videos
+$av = 0;
+while ( have_rows( 'additional_videos' ) ) {
+    the_row();
+    $av++;
+
+    echo do_shortcode( '[wp-video-popup id="AddVideo'.$av.'" hide-related="1" video="'.get_sub_field('video_external').'"]' );
 }
 
 // Pull Property Slug
@@ -152,15 +167,20 @@ $_GET['rkp'] = get_field('contact_name');
                     <?php } ?>
                 </div>
                 <div class="uk-text-right">
-                    <?php if ( ! $_GET['ref'] && ! $_COOKIE['__client-relation']  ) { ?>
+                    <?php 
+                    if ( !empty($_GET['ref']) || isset($_COOKIE['__client-relation']) == 'active' )  { ?>
+                        <button type="button" class="uk-button uk-button-orange --cr"> <i class="uk-icon-phone uk-icon-small"></i> <span>312.531.6666</span> </button>
+                    <?php } else { ?>
                         <button type="button" class="uk-button uk-button-orange" data-uk-modal="{target: '#contactForm', center: true, bgclose: false}"> <i class="uk-icon-envelope uk-icon-small"></i> </button>
                         <button type="button" class="uk-button uk-button-orange" data-uk-modal="{target: '#contactMobile', center: true, bgclose: false}"> <i class="uk-icon-phone uk-icon-small"></i> <span>310.988.4240</span> </button>
-                    <?php } else { ?>
-                        <button type="button" class="uk-button uk-button-orange --cr"> <i class="uk-icon-phone uk-icon-small"></i> <span>310.988.4240</span> </button>
-                    <?php } ?>                    <?php if ( !empty(get_field('highlight_video')) ) { ?>	
-                    <button type="button" class="uk-button uk-button-outline wp-video-popup HLVideo"> <i class="uk-icon-video-camera uk-icon-small"></i> <span>Watch the Video</span> </button>
-                    	<?php } ?>
-                    <!-- <a href="<?php echo $HLVideo; ?>" class="uk-button uk-button-outline" data-uk-lightbox> <i class="uk-icon-video-camera uk-icon-small"></i> <span>Watch the Video</span> </a> -->
+                    <?php } ?>
+                                    
+                    <?php if ( !empty(get_field('highlight_video')) ) { ?>	
+                    <a href="#" class="uk-button uk-button-outline wp-video-popup HLVideo"> <i class="uk-icon-video-camera uk-icon-small"></i> <span>Watch the Video</span> </a>
+                    <?php } ?>
+                    <!-- 
+                    
+                    <a href="<?php echo $HLVideo; ?>" class="uk-button uk-button-outline" data-uk-lightbox> <i class="uk-icon-video-camera uk-icon-small"></i> <span>Watch the Video</span> </a> -->
                 </div>
             </div>
         </div>
@@ -168,10 +188,10 @@ $_GET['rkp'] = get_field('contact_name');
             <div class="brochure-form-wrapper">
                 <header class="uk-text-center">
                     <?php 
-	                if ( ! $_GET['ref'] && ! $_COOKIE['__client-relation'] ) {
-	                		$brochure = get_field('brochure_file');
+	                if ( !empty($_GET['ref']) || isset($_COOKIE['__client-relation']) == 'active' ) {
+	                		$brochure = get_field('CR_brochure_file');
 	                	} else {
-		                	$brochure = get_field('CR_brochure_file');
+		                	$brochure = get_field('brochure_file');
 	                	}
                     
                     if ( strlen($brochure['description'] <= '130') ) {
@@ -409,14 +429,14 @@ $_GET['rkp'] = get_field('contact_name');
             <article class="uk-article uk-text-center">
                 <h2>Secure Your Opportunity to Invest with Us Now.</h2>
                 <span class="uk-text-uppercase">contact</span>
-                <?php if ( ! $_GET['ref'] && ! $_COOKIE['__client-relation'] ) { ?>
+                <?php if ( !empty($_GET['ref']) || isset($_COOKIE['__client-relation']) == 'active' ) { ?>
                     <ul>
-                        <li><?php the_field('contact_name'); ?></li>
-                        <li><?php the_field('contact_position'); ?> <br> <?php the_field('contact_phone'); ?> </li>
+                        <li>312.531.6666</li>
                     </ul>
                 <?php } else { ?>
                     <ul>
-                        <li><?php the_field('contact_phone'); ?> </li>
+                        <li><?php the_field('contact_name'); ?></li>
+                        <li><?php the_field('contact_position'); ?> <br> <?php the_field('contact_phone'); ?> </li>
                     </ul>
                 <?php } ?>
             </article>

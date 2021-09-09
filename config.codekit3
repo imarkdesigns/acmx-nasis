@@ -2076,14 +2076,6 @@
 		"oAP": "/modules/maintenance/maintenance.php",
 		"oF": 0
 		},
-	"/modules/slugs/page-1031-exchange-articles.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/modules/slugs/page-1031-exchange-articles.php",
-		"oF": 0
-		},
 	"/modules/slugs/page-1031-exchange-calculator.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -2242,6 +2234,14 @@
 		"hM": 0,
 		"oA": 2,
 		"oAP": "/modules/slugs/page-privacy-policy.php",
+		"oF": 0
+		},
+	"/modules/slugs/page-real-estate-investment-articles.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/modules/slugs/page-real-estate-investment-articles.php",
 		"oF": 0
 		},
 	"/modules/slugs/page-referral-program.php": {

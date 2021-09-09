@@ -65,7 +65,7 @@ if ( wp_is_mobile() ) {
                 <?php if ( get_sub_field('property_photo') ) : 
                     $webiPhoto = get_sub_field('property_photo'); ?>
                     <div class="uk-panel-teaser">
-                        <img src="<?php echo $webiPhoto['url']; ?>" alt="<?php the_sub_field('property_title'); ?>">
+                        <img src="<?php echo $webiPhoto['url']; ?>" alt="<?php echo $webiPhoto['alt'] ?>">
                     </div>
                     <?php endif; ?>
                     
@@ -92,7 +92,7 @@ if ( wp_is_mobile() ) {
                 <?php if ( get_sub_field('webinar_photo') ) : 
                     $webiPhoto = get_sub_field('webinar_photo'); ?>
                     <div class="uk-panel-teaser">
-                        <img src="<?php echo $webiPhoto['url']; ?>" alt="<?php the_sub_field('webinar_title'); ?>">
+                        <img src="<?php echo $webiPhoto['url']; ?>" alt="<?php echo $webiPhoto['alt']; ?>">
                     </div>
                     <?php endif; ?>
                     
@@ -158,14 +158,14 @@ if ( wp_is_mobile() ) {
                 <?php if ( get_sub_field('property_photo') ) : 
                     $webiPhoto = get_sub_field('property_photo'); ?>
                     <div class="uk-panel-teaser">
-                        <img src="<?php echo $webiPhoto['url']; ?>" alt="<?php the_sub_field('property_title'); ?>">
+                        <img src="<?php echo $webiPhoto['url']; ?>" alt="<?php echo strip_tags(get_sub_field('property_title')); ?>">
                     </div>
                     <?php endif; ?>
                     
                     <?php if ( get_sub_field('property_title') ) : ?>
                         <h3><?php the_sub_field('property_title'); ?></h3>
                     <?php endif; ?>
-                    <div class="uk-panel-body">
+                    <div class="uk-panel-body" style="font-size:16px;">
                         <?php the_sub_field('property_details'); ?>  
                     </div>
                     
@@ -185,7 +185,7 @@ if ( wp_is_mobile() ) {
                 <?php if ( get_sub_field('webinar_photo') ) : 
                     $webiPhoto = get_sub_field('webinar_photo'); ?>
                     <div class="uk-panel-teaser">
-                        <img src="<?php echo $webiPhoto['url']; ?>" alt="<?php the_sub_field('webinar_title'); ?>">
+                        <img src="<?php echo $webiPhoto['url']; ?>" alt="<?php echo strip_tags(get_sub_field('webinar_title')); ?>">
                     </div>
                     <?php endif; ?>
                     

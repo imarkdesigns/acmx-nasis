@@ -38,8 +38,8 @@
             }
 
             // Setup global cookie to PHP
-            if ( $.urlParam('ref') == md5('cr') ) {
-                Cookies.set('__client-relation', 'true', { sameSite: 'strict', secure: true, expires: 365  });
+            if ( $.urlParam('ref') === md5('cr') ) {
+                Cookies.set('__client-relation', 'active', { sameSite: 'strict', secure: true, expires: 7  });
             }
         });
         // End Referral
