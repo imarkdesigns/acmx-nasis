@@ -20,6 +20,6 @@ get_template_part( _base_header );
     }
 
     get_template_part( _page, $postName );
-    // include_once( get_template_directory() . '/modules/inc/global-investment-modal.php' );
+    include_once( get_template_directory() . '/modules/inc/global-investment-modal.php' );
 
 get_template_part( _base_footer );

@@ -32,7 +32,7 @@ include( locate_template( _inc.'local-nav.php', false, true ) );
                 <?php if ( get_sub_field('webinar_photo') ) : 
                     $webiPhoto = get_sub_field('webinar_photo'); ?>
                     <div class="uk-panel-teaser">
-                        <img src="<?php echo $webiPhoto['url']; ?>" alt="<?php the_sub_field('webinar_title'); ?>">
+                        <img src="<?php echo $webiPhoto['url']; ?>" alt="<?php echo strip_tags(get_sub_field('property_title')) ?>">
                     </div>
                     <?php endif; ?>
                     
@@ -83,7 +83,7 @@ include( locate_template( _inc.'local-nav.php', false, true ) );
                 <?php if ( get_sub_field('property_title') ) : 
                     $webiPhoto = get_sub_field('property_photo'); ?>
                     <div class="uk-panel-teaser">
-                        <img src="<?php echo $webiPhoto['url']; ?>" alt="<?php the_sub_field('property_title'); ?>">
+                        <img src="<?php echo $webiPhoto['url']; ?>" alt="<?php echo strip_tags(get_sub_field('property_title')) ?>">
                     </div>
                     <?php endif; ?>
                     

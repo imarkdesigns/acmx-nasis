@@ -5,18 +5,19 @@
         </div>
 
         <figure class="uk-overlay">
-            <img src="https://www.nasinvestmentsolutions.com/wp-content/uploads/2021/03/Landing-Page-Header-1.jpg" alt="Garver National Headquarters">
+            <img src="<?php echo __(home_url( '/wp-content/uploads/2021/08/Press-Ganey-Header-Photo-Alt.jpg' )); ?>" alt="Press Ganey National Headquarters">
             <?php /*
             <img src="<?php echo _uri.'/assets/images/img-bg-webinar.jpg'; ?>" alt="NASIS Webinar">
             */ ?>
             <figcaption class="uk-overlay-panel uk-overlay-background uk-flex uk-flex-center uk-flex-middle uk-text-center">
                 <img src="<?php echo _uri.'/assets/images/nasis-logo.svg'; ?>" alt="NAS Investment Solutions">
                 <p class="uk-text-large uk-margin-top">
-                    6.35% Cash-On-Cash on 10-Year Hold <br>
-                    Long Term Absolute NNN Lease <br>
-                    Zero Landlord Responsibilities <br>
+                    6% Cash-On-Cash Year One <br>
+                    7.35% Cash-On-Cash By Year Ten <br>
                     Annual Rent Increases – Inflation Hedge <br>
                     Monthly Distributions – Direct Deposited <br>
+                    Long Term NNN Lease <br>
+                    Award Winning Construction Completed Spring 2021 <br>
                     Non-Recourse Loan
 	            </p>                	
             </figcaption>
@@ -24,7 +25,7 @@
 
         <div class="uk-modal-footer">
             Learn More & Download Brochure
-            <a href="<?php echo esc_html( site_url('/property/garver-national-headquarters') ); ?>" class="uk-position-cover"></a>
+            <a href="<?php echo esc_html( site_url('/property/press-ganey-national-headquarters') ); ?>" class="uk-position-cover"></a>
         </div>
 
         <a class="uk-modal-close"> <span>close window</span> </a>
