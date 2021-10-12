@@ -100,7 +100,7 @@ include( locate_template( _inc.'local-nav.php', false, true ) );
                     <?php } ?>
                 </ul>
 
-                <div class="uk-grid-width-1-1 uk-grid-width-small-1-2 uk-grid-width-medium-1-3 --lb-list" data-uk-grid="{controls:'#LightBoxControl', gutter: 10}">
+                <div class="uk-grid-width-1-1 uk-grid-width-small-1-2 uk-grid-width-medium-1-2 --lb-list" data-uk-grid="{controls:'#LightBoxControl', gutter: 10}">
                     <?php foreach ( $LBPhotos as $LBPhoto ) { ?>
                     <div data-filter="<?php echo $LBPhoto['description']; ?>" data-uk-filter="<?php echo $LBPhoto['description']; ?>">
                         <a class="uk-thumbnail" href="<?php echo $LBPhoto['url']; ?>" data-uk-lightbox="{group: '<?php echo $LBPhoto['description']; ?>'}" title="<?php echo $LBPhoto['title']; ?>">
