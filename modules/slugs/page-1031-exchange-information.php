@@ -69,6 +69,52 @@ include( locate_template( _inc.'local-nav.php', false, true ) );
             <?php the_field( 'intro_content' ); ?>
 
           </article>
+
+          <?php $LandingPageGallery = [ 'post_type' => ['nasis_investments'], 'p' => '2854' ];
+          query_posts( $LandingPageGallery ); 
+          
+          while ( have_posts() ) : the_post(); ?>
+
+          <hr class="uk-divider-icon">
+
+          <section id="LightBox" class="uk-block section-gallery">
+
+                <h3>Recent DST Investment Opportunity</h3>
+
+                <?php 
+                    // Categories
+                    $categories = get_field('lightbox_category');
+                    $categories = explode( ",", $categories);
+
+                    // Gallery
+                    $LBPhotos = get_field('lightbox_photos');
+                ?>
+
+                <ul id="LightBoxControl" class="uk-subnav uk-subnav-pill">
+                    <?php if ( $post->ID != '2700' ) :
+                        echo '<li data-uk-filter="" class="uk-active"><a href="#">All</a></li>';
+                    endif; ?>
+                    <?php foreach ( $categories as $category ) { 
+                    $category = trim($category); ?>
+                    <li data-uk-filter="<?php echo $category; ?>" class="<?php echo ( $category == 'All' ) ? '--first' : (($category == 'Other Arkansas Acquisitions') ? '--last' : ''); ?>"><a href=""><?php echo $category; ?></a></li>
+                    <?php } ?>
+                </ul>
+
+                <div class="uk-grid-width-1-1 uk-grid-width-small-1-2 uk-grid-width-medium-1-3 --lb-list" data-uk-grid="{controls:'#LightBoxControl', gutter: 10}">
+                    <?php foreach ( $LBPhotos as $LBPhoto ) { ?>
+                    <div data-filter="<?php echo $LBPhoto['description']; ?>" data-uk-filter="<?php echo $LBPhoto['description']; ?>">
+                        <a class="uk-thumbnail" href="<?php echo $LBPhoto['url']; ?>" data-uk-lightbox="{group: '<?php echo $LBPhoto['description']; ?>'}" title="<?php echo $LBPhoto['title']; ?>">
+                            <?php echo wp_get_attachment_image( $LBPhoto['id'], 'full' ); ?>
+                            <div class="uk-thumbnail-caption"><?php echo $LBPhoto['title']; ?></div>
+                        </a>
+                    </div>
+                    <?php } ?>
+                </div>
+
+        </section>
+
+        <?php endwhile; wp_reset_query(); ?>
+
         </div>
         <div class="uk-width-large-1-3">
 	    <?php if ( ! wp_is_mobile() ) : ?>

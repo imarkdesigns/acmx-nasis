@@ -1,5 +1,8 @@
 (function($) {
 
+    $.getScript('https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.5/js/components/grid.min.js');
+    $.getScript('https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.5/js/components/lightbox.min.js');
+
     // States Percentage Graph
     $(window).on('load', function() {
         var forEach = function (array, callback, scope) {
