@@ -70,25 +70,25 @@ include( locate_template( _inc.'local-nav.php', false, true ) );
 
           </article>
 
-          <?php $LandingPageGallery = [ 'post_type' => ['nasis_investments'], 'p' => '2854' ];
-          query_posts( $LandingPageGallery ); 
+          <?php // $LandingPageGallery = [ 'post_type' => ['nasis_investments'], 'p' => '2854' ];
+          // query_posts( $LandingPageGallery ); 
           
-          while ( have_posts() ) : the_post(); ?>
+          while ( have_rows('gallery_section') ) : the_row(); ?>
 
           <hr class="uk-divider-icon">
 
           <section id="LightBox" class="uk-block section-gallery">
 
-                <h3>New DST Investment Property Available for 1031 Exchanges</h3>
-                <p><a href="<?php echo __(get_permalink()); ?>">Watch Video | Download Brochure</a></p>
+                <h3><?php the_sub_field('lightbox_heading'); ?></h3>
+                <p><a href="<?php echo __(get_sub_field('lightbox_link')); ?>"><?php the_sub_field('lightbox_link_label'); ?></a></p>
 
                 <?php 
                     // Categories
-                    $categories = get_field('lightbox_category');
+                    $categories = get_sub_field('lightbox_category');
                     $categories = explode( ",", $categories);
 
                     // Gallery
-                    $LBPhotos = get_field('lightbox_photos');
+                    $LBPhotos = get_sub_field('lightbox_photos');
                 ?>
 
                 <ul id="LightBoxControl" class="uk-subnav uk-subnav-pill">
@@ -112,9 +112,9 @@ include( locate_template( _inc.'local-nav.php', false, true ) );
                     <?php } ?>
                 </div>
 
-        </section>
+          </section>
 
-        <?php endwhile; wp_reset_query(); ?>
+          <?php endwhile; // end gallery section ?>
 
         </div>
         <div class="uk-width-large-1-3">
