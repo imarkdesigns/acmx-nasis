@@ -79,7 +79,8 @@ include( locate_template( _inc.'local-nav.php', false, true ) );
 
           <section id="LightBox" class="uk-block section-gallery">
 
-                <h3>Recent DST Investment Opportunity</h3>
+                <h3>New DST Investment Property Available for 1031 Exchanges</h3>
+                <p><a href="<?php echo __(get_permalink()); ?>">Watch Video | Download Brochure</a></p>
 
                 <?php 
                     // Categories
