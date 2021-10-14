@@ -80,7 +80,8 @@ include( locate_template( _inc.'local-nav.php', false, true ) );
           <section id="LightBox" class="uk-block section-gallery">
 
                 <h3><?php the_sub_field('lightbox_heading'); ?></h3>
-                <p><a href="<?php echo __(get_sub_field('lightbox_link')); ?>"><?php the_sub_field('lightbox_link_label'); ?></a></p>
+                <?php the_sub_field('lightbox_content'); ?>
+                <p class="uk-margin-bottom"><a href="<?php echo __(get_sub_field('lightbox_link')); ?>"><?php the_sub_field('lightbox_link_label'); ?></a></p>
 
                 <?php 
                     // Categories

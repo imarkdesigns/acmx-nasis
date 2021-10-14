@@ -2149,28 +2149,30 @@
     line-height: 1.4;
     text-transform: capitalize;
     margin: 0;
+  }
 
-    + p {
-      margin-top: 5px;
-      margin-bottom: 30px;
-    }
-
-    + p > a {
+  p.uk-margin-bottom {
+    a {
       border-bottom: 0;
     }
   }
 
-  .uk-subnav > li::before {
-    display: none;
+  .uk-subnav {
+    clear: both;
+    margin-top: 30px;
   }
 
-  .uk-subnav > li {
+  .uk-subnav li::before {
+    display: none !important;
+  }
+
+  .uk-subnav li {
     margin: 0 0 0 10px;
     padding: 0;
   }
 
   .uk-subnav {
-    > li > a {
+    li a {
       font-size: 14px;
       color: #888;
       text-transform: uppercase;
@@ -2178,7 +2180,7 @@
       border-bottom: 0;
     }
 
-    > li.uk-active > a {
+    li.uk-active a {
       background: @brandcolor;
       color: #EEE;
     }
